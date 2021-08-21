@@ -15,4 +15,12 @@ public class Unit : MonoBehaviour
     {
         
     }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitFocus);
+        }
+    }
 }

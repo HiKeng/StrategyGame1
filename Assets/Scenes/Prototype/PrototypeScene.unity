@@ -164,7 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ce3e9d554febb47bb7b4fa16c7fe66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _State: 0
+  _isClickAble: 1
+  _CurrentState: 0
+  _unitToFocus: {fileID: 0}
 --- !u!1001 &30099359
 PrefabInstance:
   m_ObjectHideFlags: 0

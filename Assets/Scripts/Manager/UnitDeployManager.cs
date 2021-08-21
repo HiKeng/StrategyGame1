@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class UnitDeployManager : MonoBehaviour
 {
-    public static UnitDeployManager Instance;
-
     public GameObject _playerUnitPrefab;
+
+    #region Singleton
+
+    public static UnitDeployManager Instance;
 
     private void Awake()
     {
         Instance = this;
     }
+
+    #endregion
 }

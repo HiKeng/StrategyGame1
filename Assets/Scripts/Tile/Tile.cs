@@ -34,15 +34,25 @@ public class Tile : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
         {
-            if (!_isUnitActive)
+            ClickStateManager.Instance._clickDelayCount();
+
+            if(ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle)
             {
-                _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                if (!_isUnitActive)
+                {
+                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                }
+                else
+                {
+                    Debug.Log("Can't place a unit");
+                }
             }
+
             else
             {
-                Debug.Log("Can't place a unit");
+                ClickStateManager.Instance._ResetFocus();
             }
         }
     }
