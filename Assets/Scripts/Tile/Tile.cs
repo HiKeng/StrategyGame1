@@ -22,4 +22,21 @@ public class Tile : MonoBehaviour
         Mathf.RoundToInt(transform.position.z / _gridSize)
         );
     }
+
+    void OnMouseOver()
+    {
+        Debug.Log("Over a unit");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!_isUnitActive)
+            {
+                Debug.Log("Place a unit");
+            }
+            else
+            {
+                Debug.Log("Can't place a unit");
+            }
+        }
+    }
 }

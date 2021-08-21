@@ -20,11 +20,11 @@ public class EditorSnap : MonoBehaviour
 
     private void SnapToGrid()
     {
-        int gridSize = _tile.GetGridSize();
+        int _gridSize = _tile.GetGridSize();
 
-        transform.position = new Vector3(_tile.GetGridPos().x * gridSize,
+        transform.position = new Vector3(_tile.GetGridPos().x * _gridSize,
                                          0f,
-                                         _tile.GetGridPos().y * gridSize);
+                                         _tile.GetGridPos().y * _gridSize);
     }
 
     private void UpdateLabel()
