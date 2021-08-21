@@ -29,7 +29,6 @@ public class ClickStateManager : MonoBehaviour
 
     #endregion
 
-
     public void _clickDelayCount()
     {
         StartCoroutine(_StartClickCooldownCount(_clickCooldown));

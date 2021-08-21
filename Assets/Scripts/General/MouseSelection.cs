@@ -17,6 +17,11 @@ public class MouseSelection : MonoBehaviour
     private void OnMouseOver()
     {
         Debug.Log("Mouse is over " + this.name);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log($"Clicked on {this.name}");
+        }
     }
 
     private void OnMouseExit()

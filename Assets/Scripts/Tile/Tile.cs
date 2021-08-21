@@ -36,8 +36,6 @@ public class Tile : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
         {
-            ClickStateManager.Instance._clickDelayCount();
-
             if(ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle)
             {
                 if (!_isUnitActive)
@@ -54,6 +52,8 @@ public class Tile : MonoBehaviour
             {
                 ClickStateManager.Instance._ResetFocus();
             }
+
+            ClickStateManager.Instance._clickDelayCount();
         }
     }
 }
