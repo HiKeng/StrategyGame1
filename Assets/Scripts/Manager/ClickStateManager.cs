@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class ClickStateManager : MonoBehaviour
 {
-    public bool _isClickAble = true;
+    [HideInInspector] public bool _isClickAble = true;
 
     [SerializeField] float _clickCooldown = 0.25f;
 
     public enum ClickState
     {
         Idle,
-        UnitFocus
+        UnitFocus,
+        UnitPrepareToMove
     }
 
     public ClickState _CurrentState;
 
-    [SerializeField] Unit _unitToFocus;
+    public Unit _unitToFocus;
 
     #region Singleton
 
@@ -66,8 +67,10 @@ public class ClickStateManager : MonoBehaviour
 
     public void _FocusOnUnit(Unit _targetUnit)
     {
-        _unitToFocus = _targetUnit;
         _ChangeClickState(ClickState.UnitFocus);
+
+        _unitToFocus = _targetUnit;
+        UnitActionManager.Instance._ShowActionMenu();
     }
 }
 
