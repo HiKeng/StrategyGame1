@@ -1325,6 +1325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionMenu: {fileID: 253506689}
+  _actionList: {fileID: 3287050545657121142}
+  _actionMenuSpawnPointOffset: {x: 2, y: 5, z: 0}
   _onShowActionMenu:
     m_PersistentCalls:
       m_Calls:
@@ -1339,9 +1341,6 @@ MonoBehaviour:
           m_StringArgument: 555555
           m_BoolArgument: 0
         m_CallState: 2
-  _eventList2:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &980558713
 Transform:
   m_ObjectHideFlags: 0
@@ -1354,7 +1353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1001024553
 GameObject:
@@ -2221,6 +2220,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3287050544752742556, guid: d0a3095b485c15747a0942d3166bdf5c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287050544752742556, guid: d0a3095b485c15747a0942d3166bdf5c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287050544752742556, guid: d0a3095b485c15747a0942d3166bdf5c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3287050545775885812, guid: d0a3095b485c15747a0942d3166bdf5c,
         type: 3}
       propertyPath: m_Name
@@ -2269,7 +2283,7 @@ PrefabInstance:
     - target: {fileID: 3287050545775885815, guid: d0a3095b485c15747a0942d3166bdf5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3287050545775885815, guid: d0a3095b485c15747a0942d3166bdf5c,
         type: 3}
@@ -2288,3 +2302,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0a3095b485c15747a0942d3166bdf5c, type: 3}
+--- !u!1 &3287050545657121142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9084534498484095405, guid: d0a3095b485c15747a0942d3166bdf5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3287050545657121141}
+  m_PrefabAsset: {fileID: 0}
