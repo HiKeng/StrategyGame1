@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public bool _isUnitActive = false;
+    [HideInInspector] public bool _isUnitActive = false;
 
     const int _gridSize = 10;
 
