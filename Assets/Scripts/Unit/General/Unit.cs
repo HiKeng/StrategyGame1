@@ -4,23 +4,11 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
         {
-            ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitFocus);
+            ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
         }
     }
 }

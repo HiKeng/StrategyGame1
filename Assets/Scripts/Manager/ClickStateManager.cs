@@ -60,16 +60,14 @@ public class ClickStateManager : MonoBehaviour
 
     public void _ResetFocus()
     {
-        if (_isClickAble)
-        {
-            _CurrentState = ClickState.Idle;
-            Debug.Log($"Current state = {_CurrentState}");
-            _clickDelayCount();
-        }
-        else
-        {
-            return;
-        }
+        _unitToFocus = null;
+        _ChangeClickState(ClickState.Idle);
+    }
+
+    public void _FocusOnUnit(Unit _targetUnit)
+    {
+        _unitToFocus = _targetUnit;
+        _ChangeClickState(ClickState.UnitFocus);
     }
 }
 
