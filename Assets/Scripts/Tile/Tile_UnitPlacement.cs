@@ -5,25 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Tile))]
 public class Tile_UnitPlacement : Tile 
 {
+    [SerializeField] Unit _activeUnit = null;
     [SerializeField] Vector3 _placingOffset = new Vector3(0f, 10f, 0f);
-
-    //void OnMouseOver()
-    //{
-    //    Debug.Log("Over a unit");
-
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        if (!_isUnitActive)
-    //        {
-    //            Debug.Log("Place a unit");
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("Can't place a unit");
-    //        }
-    //    }
-    //}
-
 
     public void _droppingUnit(GameObject _unitPrefab)
     {
@@ -36,5 +19,6 @@ public class Tile_UnitPlacement : Tile
                                          gameObject.transform.position.z + _placingOffset.z);
 
         GameObject _newUnit = Instantiate(_unitPrefab, _placingPos, Quaternion.identity);
+        _activeUnit = _newUnit.GetComponent<Unit>();
     }
 }
