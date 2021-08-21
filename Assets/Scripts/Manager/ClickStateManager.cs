@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ClickStateManager : MonoBehaviour
 {
@@ -12,12 +13,19 @@ public class ClickStateManager : MonoBehaviour
     {
         Idle,
         UnitFocus,
-        UnitPrepareToMove
+        UnitPrepareToMove,
+        UnitPrepareToAttack
     }
 
     public ClickState _CurrentState;
 
-    public Unit _unitToFocus;
+    [HideInInspector] public Unit _unitToFocus;
+
+    [Header("Events")]
+    [SerializeField] UnityEvent _onFocusOnUnit;
+    [SerializeField] UnityEvent _onResetFocus;
+    [SerializeField] UnityEvent _onStartUnitPrepareToMove;
+
 
     #region Singleton
 
@@ -63,6 +71,7 @@ public class ClickStateManager : MonoBehaviour
     {
         _unitToFocus = null;
         _ChangeClickState(ClickState.Idle);
+        _onResetFocus.Invoke();
     }
 
     public void _FocusOnUnit(Unit _targetUnit)
@@ -71,7 +80,10 @@ public class ClickStateManager : MonoBehaviour
 
         _unitToFocus = _targetUnit;
         UnitActionManager.Instance._ShowActionMenu();
+
+        _onFocusOnUnit.Invoke();
     }
+
 }
 
 
