@@ -27,14 +27,23 @@ public class Tile : MonoBehaviour
     {
         if(!_isUnitActive)
         {
-            _droppingUnit();
+            GetComponent<Tile_UnitPlacement>()._droppingUnit(_unitPrefab);
         }
     }
 
-    void _droppingUnit()
-    {
-        _isUnitActive = false;
 
-        Debug.Log("Placing tower at " + );
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!_isUnitActive)
+            {
+                _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+            }
+            else
+            {
+                Debug.Log("Can't place a unit");
+            }
+        }
     }
 }

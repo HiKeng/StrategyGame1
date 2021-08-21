@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class UnitDeployManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static UnitDeployManager Instance;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject _playerUnitPrefab;
+
+    private void Awake()
     {
-        
+        Instance = this;
     }
 }
