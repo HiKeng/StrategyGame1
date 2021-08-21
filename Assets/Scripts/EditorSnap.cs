@@ -2,15 +2,14 @@
 
 [ExecuteInEditMode]
 [SelectionBase]
-[RequireComponent(typeof(Waypoint))]
+[RequireComponent(typeof(Tile))]
 public class EditorSnap : MonoBehaviour
 {
-
-    Waypoint waypoint;
+    Tile _tile;
 
     void Awake()
     {
-        waypoint = GetComponent<Waypoint>();
+        _tile = GetComponent<Tile>();
     }
     
     void Update()
@@ -21,23 +20,18 @@ public class EditorSnap : MonoBehaviour
 
     private void SnapToGrid()
     {
-        int gridSize = waypoint.GetGridSize();
+        int gridSize = _tile.GetGridSize();
 
-        transform.position = new Vector3(
-            waypoint.GetGridPos().x * gridSize,
-            0f,
-            waypoint.GetGridPos().y * gridSize
-            );
+        transform.position = new Vector3(_tile.GetGridPos().x * gridSize,
+                                         0f,
+                                         _tile.GetGridPos().y * gridSize);
     }
 
     private void UpdateLabel()
     {
         TextMesh textMesh = GetComponentInChildren<TextMesh>();
 
-        string labelText = 
-            waypoint.GetGridPos().x + 
-            "," +
-            waypoint.GetGridPos().y;
+        string labelText = _tile.GetGridPos().x + "," + _tile.GetGridPos().y;
 
         textMesh.text = labelText;
         gameObject.name = labelText;

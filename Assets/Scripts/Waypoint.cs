@@ -18,7 +18,6 @@ public class Waypoint : MonoBehaviour
     public bool isTowerActive = false;
 
     Vector2Int gridPos;
-
     const int gridSize = 10;
 
     public int GetGridSize()
