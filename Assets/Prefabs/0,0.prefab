@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5859133443186579966}
   - component: {fileID: 662560216908157454}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: 0,0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 8.45, y: 9.5, z: 8.7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6722256187575497551
 GameObject:
