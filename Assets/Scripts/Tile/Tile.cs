@@ -48,6 +48,11 @@ public class Tile : MonoBehaviour
                 }
             }
 
+            if(ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.UnitPrepareToMove)
+            {
+                UnitActionManager.Instance._StartMoveUnit(GetComponent<Tile>());
+            }
+
             else
             {
                 ClickStateManager.Instance._ResetFocus();

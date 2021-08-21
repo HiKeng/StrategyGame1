@@ -13,6 +13,7 @@ public class UnitActionManager : MonoBehaviour
     [SerializeField] UnityEvent _onShowActionMenu;
     [SerializeField] UnityEvent _onCloseActionMenu;
     [SerializeField] UnityEvent _onSelectMoveUnit;
+    [SerializeField] UnityEvent _onStartMoveUnit;
 
     #region Singleton
 
@@ -51,5 +52,16 @@ public class UnitActionManager : MonoBehaviour
     {
         ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToMove);
         _CloseActionMenu();
+    }
+
+    public void _StartMoveUnit(Tile _targetPosition)
+    {
+        // Focus unit moveToPosition()
+        // reset focus()
+        // event invoke()
+
+        Debug.Log("Unit start move to " + _targetPosition.name);
+        ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.Idle);
+        _onStartMoveUnit.Invoke();
     }
 }
