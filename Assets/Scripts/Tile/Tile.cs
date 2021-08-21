@@ -22,4 +22,19 @@ public class Tile : MonoBehaviour
         Mathf.RoundToInt(transform.position.z / _gridSize)
         );
     }
+
+    public void _DeployUnit(GameObject _unitPrefab)
+    {
+        if(!_isUnitActive)
+        {
+            _droppingUnit();
+        }
+    }
+
+    void _droppingUnit()
+    {
+        _isUnitActive = false;
+
+        Debug.Log("Placing tower at " + );
+    }
 }
