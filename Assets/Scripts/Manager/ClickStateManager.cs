@@ -48,7 +48,7 @@ public class ClickStateManager : MonoBehaviour
         if(_isClickAble)
         {
             _CurrentState = _state;
-            Debug.Log($"Current state = {_CurrentState}");
+            Debug.Log($"Click state changed to >> {_CurrentState}");
             _clickDelayCount();
         }
         else

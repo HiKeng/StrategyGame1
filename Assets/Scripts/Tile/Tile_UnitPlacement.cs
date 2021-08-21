@@ -12,7 +12,7 @@ public class Tile_UnitPlacement : Tile
     {
         _isUnitActive = true;
 
-        Debug.Log("Placing tower at " + gameObject.name);
+        Debug.Log($"Placing unit at >> {gameObject.name}");
 
         Vector3 _placingPos = new Vector3(gameObject.transform.position.x + _placingOffset.x,
                                          gameObject.transform.position.y + _placingOffset.y,
