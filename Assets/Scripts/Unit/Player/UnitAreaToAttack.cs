@@ -2,26 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class UnitAreaToAttack : MonoBehaviour
 {
     [SerializeField] List<ActionArea> _actionAreaList;
 
-
-    void Start()
-    {
-        
-    }
+    [SerializeField] List<Unit> _unitWithinArea;
 
     void Update()
     {
-        _getAllActionAreaInChild();
+        _updateUnitInActionAreas();
     }
 
-    void _getAllActionAreaInChild()
+    void _updateUnitInActionAreas()
     {
-        foreach(ActionArea actionArea in transform)
+        for (int i = 0; i < _actionAreaList.Count; i++)
         {
-            _actionAreaList.Add(actionArea.GetComponent<ActionArea>());
+            _actionAreaList[i]._UpdateUnitInArea();
         }
     }
 }

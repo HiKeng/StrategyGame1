@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ActionArea : Tile
 {
+    [SerializeField] List<Unit> _unitInArea;
+
+
+
     void Start()
     {
         
@@ -12,5 +16,18 @@ public class ActionArea : Tile
     void Update()
     {
         
+    }
+
+    public void _UpdateUnitInArea()
+    {
+        Debug.Log("Hello");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<Unit>() != null)
+        {
+            _unitInArea.Add(other.GetComponent<Unit>());
+        }
     }
 }
