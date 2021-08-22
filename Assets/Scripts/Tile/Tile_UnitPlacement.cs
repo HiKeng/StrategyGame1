@@ -38,6 +38,7 @@ public class Tile_UnitPlacement : Tile
     public void _ResetUnitActive()
     {
         _currentActiveUnitOnTile = null;
+        _isUnitActive = false;
     }
 
     public void _DeployUnit(GameObject _unitPrefab)

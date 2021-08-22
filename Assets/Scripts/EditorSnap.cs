@@ -5,6 +5,8 @@
 [RequireComponent(typeof(Tile))]
 public class EditorSnap : MonoBehaviour
 {
+
+#if UNITY_EDITOR
     Tile _tile;
     [SerializeField] string _baseName = "";
 
@@ -37,4 +39,5 @@ public class EditorSnap : MonoBehaviour
         textMesh.text = labelText;
         gameObject.name = _baseName + labelText;
     }
+#endif
 }

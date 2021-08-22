@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6487049945689049364}
   - component: {fileID: 6722256185824723143}
   - component: {fileID: 6722256185824723142}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3672146962239920836}
   - component: {fileID: 5825559628000449579}
   - component: {fileID: 2539032220279804931}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AreaToAttack 0,0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,8 +140,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.45, y: 8.05265, z: 8.7}
-  m_Center: {x: 0, y: 7.9875603, z: 0}
+  m_Size: {x: 8.45, y: 22.427544, z: 8.7}
+  m_Center: {x: 0, y: 4.608021, z: 0}
 --- !u!114 &3672146962239920836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 6722256187575497547}
   - component: {fileID: 6722256187575497546}
   - component: {fileID: 6722256187575497545}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ MeshCollider:
   m_GameObject: {fileID: 6722256187575497551}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -288,7 +288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1457945536329988, guid: f27a4597efbf3694b95687e7aeef7fcc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457945536329988, guid: f27a4597efbf3694b95687e7aeef7fcc, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4501762900964862, guid: f27a4597efbf3694b95687e7aeef7fcc, type: 3}
       propertyPath: m_LocalPosition.x

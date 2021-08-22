@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActionArea : Tile
 {
-    [SerializeField] UnitAreaToAttack _unitAttackArea;
+    UnitAreaToAttack _unitAttackArea;
 
     [SerializeField] List<Unit> _unitInArea;
 
@@ -25,7 +25,7 @@ public class ActionArea : Tile
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Unit>() != null)
+        if(other.GetComponent<Unit>() != null && other != this)
         {
             _unitInArea.Add(other.GetComponent<Unit>());
             _UpdateAddUnitInArea(other.GetComponent<Unit>());
@@ -34,7 +34,10 @@ public class ActionArea : Tile
 
     public void _RemoveFromUnitInAreaList(Unit _unitToRemove)
     {
-        _unitInArea.Remove(_unitToRemove);
-        _UpdateRemoveUnitInArea(_unitToRemove);
+        if(_unitToRemove != this)
+        {
+            _unitInArea.Remove(_unitToRemove);
+            _UpdateRemoveUnitInArea(_unitToRemove);
+        }
     }
 }
