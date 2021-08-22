@@ -21,4 +21,13 @@ public class UnitAreaToAttack : MonoBehaviour
             _actionAreaList[i]._UpdateUnitInArea();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<Unit>() != null)
+        {
+            _unitWithinArea.Add(other.GetComponent<Unit>());
+            Debug.Log("Found");
+        }
+    }
 }

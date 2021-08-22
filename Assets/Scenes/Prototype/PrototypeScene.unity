@@ -442,6 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345748403}
   - component: {fileID: 345748404}
+  - component: {fileID: 345748405}
   m_Layer: 0
   m_Name: Group_AreaToAttack
   m_TagString: Untagged
@@ -481,6 +482,19 @@ MonoBehaviour:
   - {fileID: 1012321436}
   - {fileID: 1882957516}
   _unitWithinArea: []
+--- !u!65 &345748405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345748402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10.1049385, y: 10.767212, z: 19.985691}
+  m_Center: {x: 0, y: 8.066174, z: 5.103098}
 --- !u!1 &455693115
 GameObject:
   m_ObjectHideFlags: 0
