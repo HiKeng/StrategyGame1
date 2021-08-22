@@ -54,34 +54,43 @@ public class UnitActionManager : MonoBehaviour
 
     public void _StartPrepareToMoveUnit()
     {
-        ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToMove);
-        ClickStateManager.Instance._ResetFocusWithOutClearUnit();
+        if (ClickStateManager.Instance._unitToFocus.GetComponent<UnitActionBar>()._isActionBarReady)
+        {
+            ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToMove);
+            ClickStateManager.Instance._ResetFocusWithOutClearUnit();
 
-        _CloseActionMenu();
+            _CloseActionMenu();
 
-        ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._onPrepareMoving.Invoke();
-        _onStartPrepareMoveUnit.Invoke();
+            ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._onPrepareMoving.Invoke();
+            _onStartPrepareMoveUnit.Invoke();
+        }
     }
 
     public void _StartMoveUnit(Tile _targetPosition)
     {
-        if(_targetPosition == null)
+        if(ClickStateManager.Instance._unitToFocus.GetComponent<UnitActionBar>()._isActionBarReady)
         {
-            Debug.LogError("TargetPos == null");
+            if (_targetPosition == null)
+            {
+                Debug.LogError("TargetPos == null");
+            }
+
+            if (ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>() == null)
+            {
+                Debug.LogError("UnitToFocus == null");
+            }
+
+            ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._MoveToPosition(_targetPosition);
+
+            Debug.Log("Unit start move to " + _targetPosition.name);
+            ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.Idle);
+
+            ClickStateManager.Instance._unitToFocus.GetComponent<UnitActionBar>()._ActionBarReset();
+            ClickStateManager.Instance._ResetFocus();
+
+            _onStartMoveUnit.Invoke();
+
         }
-
-        if (ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>() == null)
-        {
-            Debug.LogError("UnitToFocus == null");
-        }
-
-        ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._MoveToPosition(_targetPosition);
-
-        Debug.Log("Unit start move to " + _targetPosition.name);
-        ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.Idle);
-
-        _onStartMoveUnit.Invoke();
-        ClickStateManager.Instance._ResetFocus();
     }
 
     public void _StartPrepareToAttackUnit()
