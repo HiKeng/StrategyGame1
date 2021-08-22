@@ -70,12 +70,12 @@ public class Tile_UnitPlacement : Tile
                 UnitActionManager.Instance._StartMoveUnit(GetComponent<Tile>());
             }
 
-            else
-            {
-                ClickStateManager.Instance._ResetFocus();
-            }
-
             ClickStateManager.Instance._clickDelayCount();
+        }
+
+        if(Input.GetMouseButtonDown(1) && ClickStateManager.Instance._isClickAble)
+        {
+            ClickStateManager.Instance._ResetFocus();
         }
     }
 }

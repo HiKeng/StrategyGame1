@@ -15,6 +15,7 @@ public class UnitMovement : MonoBehaviour
     Tile _endingTile = null;
     [SerializeField] Vector3 _endingPoint = new Vector3();
 
+    [SerializeField] public UnityEvent _onPrepareMoving;
     [SerializeField] UnityEvent _onStartMoving; 
     [SerializeField] UnityEvent _onUpdateMoving;
     [SerializeField] UnityEvent _onEndMoving;

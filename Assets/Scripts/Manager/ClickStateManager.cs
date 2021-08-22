@@ -79,6 +79,13 @@ public class ClickStateManager : MonoBehaviour
         _onResetFocus.Invoke();
     }
 
+    public void _ResetFocusWithOutClearUnit()
+    {
+
+        _ChangeClickState(ClickState.Idle);
+        _onResetFocus.Invoke();
+    }
+
     public void _FocusOnUnit(Unit _targetUnit)
     {
         _ChangeClickState(ClickState.UnitFocus);
