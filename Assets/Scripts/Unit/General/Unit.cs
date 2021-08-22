@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Unit : MonoBehaviour
 {
     public bool _isPlayerControllable = true;
     public bool _isAvailableForAction;
     public Tile _AvailableOnTile;
+
+    public UnityEvent onFocus;
+    public UnityEvent onNotFocus;
 
     void OnMouseOver()
     {

@@ -30,7 +30,8 @@ public class UnitAttack : MonoBehaviour
     void _attackToUnit(Unit _targetUnit)
     {
         if(_targetUnit.gameObject.active == true
-            && !_isAttackOnCooldown)
+            && !_isAttackOnCooldown
+            && _targetUnit.GetComponent<UnitEnemy>() != null)
         {
             _targetUnit.GetComponent<UnitHealth>()._TakeDamage(_damagePerHit);
             Debug.Log($"{this.name} attack to {_targetUnit.name}");

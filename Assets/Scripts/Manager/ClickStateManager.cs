@@ -69,6 +69,11 @@ public class ClickStateManager : MonoBehaviour
 
     public void _ResetFocus()
     {
+        if(_unitToFocus != null)
+        {
+            _unitToFocus.onNotFocus.Invoke();
+        }
+
         _unitToFocus = null;
         _ChangeClickState(ClickState.Idle);
         _onResetFocus.Invoke();
@@ -79,6 +84,8 @@ public class ClickStateManager : MonoBehaviour
         _ChangeClickState(ClickState.UnitFocus);
 
         _unitToFocus = _targetUnit;
+        _targetUnit.onFocus.Invoke();
+
         UnitActionManager.Instance._ShowActionMenu();
 
         _onFocusOnUnit.Invoke();
