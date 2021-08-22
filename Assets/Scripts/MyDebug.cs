@@ -28,6 +28,11 @@ public class MyDebug : MonoBehaviour
         {
             SceneManager.LoadScene(Application.loadedLevel);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void _ChangeMoveCountValue(int _amount)
