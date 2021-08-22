@@ -33,12 +33,23 @@ public class ActionArea : Tile
         AddNewUnit(other);
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Unit>() != null && other != this)
+        {
+            _RemoveFromUnitInAreaList(other.GetComponent<Unit>());
+        }
+    }
+
     private void AddNewUnit(Collider other)
     {
         if (other.GetComponent<Unit>() != null && other != this)
         {
-            _unitInArea.Add(other.GetComponent<Unit>());
-            _UpdateAddUnitInArea(other.GetComponent<Unit>());
+            if(!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+            {
+                _unitInArea.Add(other.GetComponent<Unit>());
+                _UpdateAddUnitInArea(other.GetComponent<Unit>());
+            }
         }
     }
 
@@ -49,5 +60,28 @@ public class ActionArea : Tile
             _unitInArea.Remove(_unitToRemove);
             _UpdateRemoveUnitInArea(_unitToRemove);
         }
+    }
+
+    bool _isAlreadyAdded()
+    {
+        bool _isUnitAlreadyAdded = false;
+
+        for (int i = 0; i < _unitAttackArea._unitWithinArea.Count; i++)
+        {
+            for (int j = 0; i < _unitInArea.Count; i++)
+            {
+                if (_unitAttackArea._unitWithinArea[i] == _unitInArea[j])
+                {
+                    _isUnitAlreadyAdded = true;
+                }
+                else
+                {
+
+                }
+            }
+            
+        }
+
+        return _isUnitAlreadyAdded;
     }
 }

@@ -10,7 +10,10 @@ public class TileColliderSetAble : MonoBehaviour
     {
         for (int i = 0; i < _tileColliderList.Count; i++)
         {
-            _tileColliderList[i].enabled = _isActive;
+            if(_tileColliderList[i] != null)
+            {
+                _tileColliderList[i].enabled = _isActive;
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class UnitHealth : MonoBehaviour
 {
     [SerializeField] public float _MaxHealth = 100f;
-    [SerializeField] public float _CurrentHealth = 100f;
+    [HideInInspector] public float _CurrentHealth = 100f;
 
     [Header("UI")]
     [SerializeField] Slider _healthSlider;
@@ -19,6 +19,7 @@ public class UnitHealth : MonoBehaviour
 
     private void Start()
     {
+        _CurrentHealth = _MaxHealth;
         _healthSlider.maxValue = _MaxHealth;
         _healthSlider.value = _healthSlider.maxValue;
     }

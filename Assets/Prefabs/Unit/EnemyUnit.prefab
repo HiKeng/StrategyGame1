@@ -103,7 +103,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   onFocus:
     m_PersistentCalls:
@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaToAttack: {fileID: 7236407002883465032}
-  _attackCooldownTime: 20
-  _damagePerHit: 20
+  _attackCooldownTime: 5
+  _damagePerHit: 25
   _onStartAttack:
     m_PersistentCalls:
       m_Calls: []
