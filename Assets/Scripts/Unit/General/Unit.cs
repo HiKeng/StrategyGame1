@@ -6,11 +6,12 @@ using UnityEngine.Events;
 public class Unit : MonoBehaviour
 {
     public bool _isPlayerControllable = true;
-    public bool _isAvailableForAction;
-    public Tile _AvailableOnTile;
+    [HideInInspector] public bool _isAvailableForAction;
+    [HideInInspector] public Tile _AvailableOnTile;
 
-    [SerializeField] List<GameObject> _areaVisualList;
+    [SerializeField] List<ActionArea> _areaVisualList;
 
+    [Header("Event")]
     public UnityEvent onStart;
     public UnityEvent onFocus;
     public UnityEvent onNotFocus;
@@ -49,7 +50,7 @@ public class Unit : MonoBehaviour
     {
         for (int i = 0; i < _areaVisualList.Count; i++)
         {
-            _areaVisualList[i].SetActive(_isActive);
+            _areaVisualList[i]._areaSample.SetActive(_isActive);
         }
     }
     

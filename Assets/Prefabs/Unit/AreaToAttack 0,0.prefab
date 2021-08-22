@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c7fc0e902b1a04d8e624a7f4f16f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _areaSample: {fileID: 2073082330534806287}
   _unitInArea: []
 --- !u!1 &6722256187575497551
 GameObject:

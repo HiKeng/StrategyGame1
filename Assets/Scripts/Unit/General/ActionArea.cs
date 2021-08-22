@@ -6,6 +6,7 @@ public class ActionArea : Tile
 {
     UnitAreaToAttack _unitAttackArea;
 
+    [SerializeField] public GameObject _areaSample;
     [SerializeField] List<Unit> _unitInArea;
 
     void Awake()
