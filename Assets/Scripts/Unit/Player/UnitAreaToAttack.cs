@@ -7,5 +7,5 @@ public class UnitAreaToAttack : MonoBehaviour
 {
     [SerializeField] List<ActionArea> _actionAreaList;
 
-    [SerializeField] public List<Unit> _unitWithinArea;
+    [HideInInspector] public List<Unit> _unitWithinArea;
 }

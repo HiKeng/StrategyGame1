@@ -26,6 +26,7 @@ public class Unit : MonoBehaviour
             && ClickStateManager.Instance._isClickAble && _isAvailableForAction
             && _isPlayerControllable)
         {
+            ClickStateManager.Instance._ResetFocus();
             ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
         }
     }
