@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaToAttack: {fileID: 7236407002883465032}
-  _attackCooldownTime: 5
+  _attackCooldownTime: 4
   _damagePerHit: 25
   _onStartAttack:
     m_PersistentCalls:

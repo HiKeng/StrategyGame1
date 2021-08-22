@@ -57,12 +57,12 @@ public class UnitActionManager : MonoBehaviour
         if (ClickStateManager.Instance._unitToFocus.GetComponent<UnitActionBar>()._isActionBarReady)
         {
             ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToMove);
+            _onStartPrepareMoveUnit.Invoke();
             ClickStateManager.Instance._ResetFocusWithOutClearUnit();
 
             _CloseActionMenu();
 
             ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._onPrepareMoving.Invoke();
-            _onStartPrepareMoveUnit.Invoke();
         }
     }
 
