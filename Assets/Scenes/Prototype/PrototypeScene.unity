@@ -1876,6 +1876,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1679715565}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1847825877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1495769268534985357, guid: 0364e1abecfd49047830a287a9b28fc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1495769268382692876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1998040775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2243,6 +2249,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClickState_Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1847825877}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350941143606891210, guid: f01f73f84eb7f5e4cb488d76558a695b,
+        type: 3}
+      propertyPath: _onResetFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1350941143606891211, guid: f01f73f84eb7f5e4cb488d76558a695b,
         type: 3}
