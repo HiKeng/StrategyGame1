@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    //public bool _isUnitActive = false;
-
     const int _gridSize = 10;
 
     public int GetGridSize()
@@ -21,43 +19,5 @@ public class Tile : MonoBehaviour
         Mathf.RoundToInt(transform.position.x / _gridSize),
         Mathf.RoundToInt(transform.position.z / _gridSize)
         );
-    }
-
-    public void _DeployUnit(GameObject _unitPrefab)
-    {
-        if(!_isUnitActive)
-        {
-            GetComponent<Tile_UnitPlacement>()._droppingUnit(_unitPrefab);
-        }
-    }
-
-    void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
-        {
-            if(ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle)
-            {
-                if (!_isUnitActive)
-                {
-                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
-                }
-                else
-                {
-                    Debug.Log("Can't place a unit");
-                }
-            }
-
-            if(ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.UnitPrepareToMove)
-            {
-                UnitActionManager.Instance._StartMoveUnit(GetComponent<Tile>());
-            }
-
-            else
-            {
-                ClickStateManager.Instance._ResetFocus();
-            }
-
-            ClickStateManager.Instance._clickDelayCount();
-        }
     }
 }

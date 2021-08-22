@@ -5,8 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Tile))]
 public class Tile_UnitPlacement : Tile 
 {
+    public bool _isUnitActive = false;
+
     [SerializeField] Unit _currentActiveUnitOnTile = null;
     [SerializeField] Vector3 _placingOffset = new Vector3(0f, 10f, 0f);
+
+    public Vector3 _GetPlacingOffset()
+    {
+        return _placingOffset;
+    }
 
     public void _droppingUnit(GameObject _unitPrefab)
     {
@@ -20,11 +27,7 @@ public class Tile_UnitPlacement : Tile
 
         GameObject _newUnit = Instantiate(_unitPrefab, _placingPos, Quaternion.identity);
         _currentActiveUnitOnTile = _newUnit.GetComponent<Unit>();
-    }
-
-    public Vector3 _GetPlacingOffset()
-    {
-        return _placingOffset;
+        _newUnit.GetComponent<Unit>()._AvailableOnTile = GetComponent<Tile>();
     }
 
     public void _AssignNewUnitActive(Unit _unitToAssign)
@@ -35,6 +38,44 @@ public class Tile_UnitPlacement : Tile
     public void _ResetUnitActive()
     {
         _currentActiveUnitOnTile = null;
-        Debug.Log("Activate NUll");
+        Debug.Log($"{this.name} Activate NUll");
+    }
+
+    public void _DeployUnit(GameObject _unitPrefab)
+    {
+        if (!_isUnitActive)
+        {
+            GetComponent<Tile_UnitPlacement>()._droppingUnit(_unitPrefab);
+        }
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
+        {
+            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle)
+            {
+                if (!_isUnitActive)
+                {
+                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                }
+                else
+                {
+                    Debug.Log("Can't place a unit");
+                }
+            }
+
+            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.UnitPrepareToMove)
+            {
+                UnitActionManager.Instance._StartMoveUnit(GetComponent<Tile>());
+            }
+
+            else
+            {
+                ClickStateManager.Instance._ResetFocus();
+            }
+
+            ClickStateManager.Instance._clickDelayCount();
+        }
     }
 }

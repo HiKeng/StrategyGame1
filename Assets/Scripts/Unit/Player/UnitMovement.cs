@@ -19,8 +19,10 @@ public class UnitMovement : MonoBehaviour
     [SerializeField] UnityEvent _onUpdateMoving;
     [SerializeField] UnityEvent _onEndMoving;
 
-    // constant speed
-    // move directly to the destination
+    private void Start()
+    {
+        _endingPoint = GetComponent<Unit>()._AvailableOnTile.transform.position;
+    }
 
     void FixedUpdate()
     {
@@ -41,9 +43,14 @@ public class UnitMovement : MonoBehaviour
             _onEndMoving.Invoke();
         }
 
-        if (_isMoving && Vector3.Distance(transform.position, _endingPoint) > 0.05f && _endingTile.GetComponent<Tile_UnitPlacement>() != null)
+        if (_isMoving 
+            && Vector3.Distance(transform.position, _endingPoint) > 0.05f 
+            && GetComponent<Unit>()._AvailableOnTile.GetComponent<Tile_UnitPlacement>() != null)
         {
-            _endingTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+            //_endingTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+
+            GetComponent<Unit>()._AvailableOnTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+
         }
     }
 
@@ -53,8 +60,6 @@ public class UnitMovement : MonoBehaviour
 
         _endingPoint = _destination.transform.position + _tileUnitPlacement._GetPlacingOffset();
         _endingTile = _destination;
-
-        //_tileUnitPlacement._ResetUnitActive();
 
         _isMoving = true;
         Debug.Log("Start move");

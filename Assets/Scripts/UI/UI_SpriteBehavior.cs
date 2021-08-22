@@ -6,7 +6,6 @@ public class UI_SpriteBehavior : MonoBehaviour
 {
     [SerializeField] bool _lookAtCamera = true;
 
-
     private void Update()
     {
         _spriteBehavior();
