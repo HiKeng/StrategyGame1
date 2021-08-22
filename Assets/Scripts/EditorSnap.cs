@@ -6,6 +6,7 @@
 public class EditorSnap : MonoBehaviour
 {
     Tile _tile;
+    [SerializeField] string _baseName = "";
 
     void Awake()
     {
@@ -34,6 +35,6 @@ public class EditorSnap : MonoBehaviour
         string labelText = _tile.GetGridPos().x + "," + _tile.GetGridPos().y;
 
         textMesh.text = labelText;
-        gameObject.name = labelText;
+        gameObject.name = _baseName + labelText;
     }
 }

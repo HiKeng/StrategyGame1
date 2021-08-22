@@ -12,7 +12,10 @@ public class UnitActionManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] UnityEvent _onShowActionMenu;
     [SerializeField] UnityEvent _onCloseActionMenu;
+
     [SerializeField] UnityEvent _onStartPrepareMoveUnit;
+    [SerializeField] UnityEvent _onStartPrepareAttackUnit;
+
     [SerializeField] UnityEvent _onStartMoveUnit;
 
     #region Singleton
@@ -65,5 +68,13 @@ public class UnitActionManager : MonoBehaviour
         ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.Idle);
 
         _onStartMoveUnit.Invoke();
+    }
+
+    public void _StartPrepareToAttackUnit()
+    {
+        ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToAttack);
+        _CloseActionMenu();
+
+        _onStartPrepareAttackUnit.Invoke();
     }
 }
