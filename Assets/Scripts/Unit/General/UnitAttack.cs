@@ -29,17 +29,32 @@ public class UnitAttack : MonoBehaviour
 
     void _attackToUnit(Unit _targetUnit)
     {
-        if(_targetUnit.gameObject.active == true
-            && !_isAttackOnCooldown
-            && _targetUnit.GetComponent<UnitEnemy>() != null)
+        if(_targetUnit.gameObject.active == true && !_isAttackOnCooldown)
         {
-            _targetUnit.GetComponent<UnitHealth>()._TakeDamage(_damagePerHit);
-            Debug.Log($"{this.name} attack to {_targetUnit.name}");
 
-            _onStartAttack.Invoke();
+            // if player hit enemy
+            if(_targetUnit.GetComponent<UnitEnemy>() != null && this.GetComponent<UnitEnemy>() == null)
+            {
+                AttackUnit(_targetUnit);
+            }
 
-            StartCoroutine(_countAttackInterval(_attackCooldownTime));
+            // if enemy hit player
+            if (_targetUnit.GetComponent<UnitEnemy>() == null && this.GetComponent<UnitEnemy>() != null)
+            {
+                AttackUnit(_targetUnit);
+            }
+
         }
+    }
+
+    private void AttackUnit(Unit _targetUnit)
+    {
+        _targetUnit.GetComponent<UnitHealth>()._TakeDamage(_damagePerHit);
+        Debug.Log($"{this.name} attack to {_targetUnit.name}");
+
+        _onStartAttack.Invoke();
+
+        StartCoroutine(_countAttackInterval(_attackCooldownTime));
     }
 
     public IEnumerator _countAttackInterval(float _cooldownTime)

@@ -25,7 +25,17 @@ public class ActionArea : Tile
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Unit>() != null && other != this)
+        AddNewUnit(other);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        AddNewUnit(other);
+    }
+
+    private void AddNewUnit(Collider other)
+    {
+        if (other.GetComponent<Unit>() != null && other != this)
         {
             _unitInArea.Add(other.GetComponent<Unit>());
             _UpdateAddUnitInArea(other.GetComponent<Unit>());

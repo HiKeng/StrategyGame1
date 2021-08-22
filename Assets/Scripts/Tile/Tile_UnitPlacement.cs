@@ -57,7 +57,7 @@ public class Tile_UnitPlacement : Tile
             {
                 if (!_isUnitActive)
                 {
-                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                    //_DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
                 }
                 else
                 {
