@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d452d86eb30bb624bb9c159435c7f796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isAlive: 1
   _MaxHealth: 100
   _CurrentHealth: 100
   _healthSlider: {fileID: 2477036761217603945}

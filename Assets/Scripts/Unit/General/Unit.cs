@@ -50,7 +50,7 @@ public class Unit : MonoBehaviour
     {
         for (int i = 0; i < _areaVisualList.Count; i++)
         {
-            _areaVisualList[i]._areaSample.SetActive(_isActive);
+            _areaVisualList[i]._AreaSample.SetActive(_isActive);
         }
     }
     

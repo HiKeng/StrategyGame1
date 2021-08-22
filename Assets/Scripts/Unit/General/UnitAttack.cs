@@ -31,7 +31,6 @@ public class UnitAttack : MonoBehaviour
     {
         if(_targetUnit.gameObject.active == true && !_isAttackOnCooldown)
         {
-
             // if player hit enemy
             if(_targetUnit.GetComponent<UnitEnemy>() != null && this.GetComponent<UnitEnemy>() == null)
             {
@@ -43,7 +42,6 @@ public class UnitAttack : MonoBehaviour
             {
                 AttackUnit(_targetUnit);
             }
-
         }
     }
 
@@ -55,6 +53,17 @@ public class UnitAttack : MonoBehaviour
         _onStartAttack.Invoke();
 
         StartCoroutine(_countAttackInterval(_attackCooldownTime));
+
+        _checkIsTargetDead(_targetUnit);
+    }
+
+    void _checkIsTargetDead(Unit _targetUnit)
+    {
+        if(!_targetUnit.GetComponent<UnitHealth>()._isAlive)
+        {
+            _areaToAttack._RemoveUnitFromList(_targetUnit);
+        }
+
     }
 
     public IEnumerator _countAttackInterval(float _cooldownTime)

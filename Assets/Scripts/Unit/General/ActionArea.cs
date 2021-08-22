@@ -6,8 +6,8 @@ public class ActionArea : Tile
 {
     UnitAreaToAttack _unitAttackArea;
 
-    [SerializeField] public GameObject _areaSample;
-    [SerializeField] List<Unit> _unitInArea;
+    [SerializeField] public GameObject _AreaSample;
+    [SerializeField] public List<Unit> _UnitInArea;
 
     void Awake()
     {
@@ -48,7 +48,7 @@ public class ActionArea : Tile
         {
             if(!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
             {
-                _unitInArea.Add(other.GetComponent<Unit>());
+                _UnitInArea.Add(other.GetComponent<Unit>());
                 _UpdateAddUnitInArea(other.GetComponent<Unit>());
             }
         }
@@ -58,7 +58,7 @@ public class ActionArea : Tile
     {
         if(_unitToRemove != this)
         {
-            _unitInArea.Remove(_unitToRemove);
+            _UnitInArea.Remove(_unitToRemove);
             _UpdateRemoveUnitInArea(_unitToRemove);
         }
     }
@@ -69,9 +69,9 @@ public class ActionArea : Tile
 
         for (int i = 0; i < _unitAttackArea._unitWithinArea.Count; i++)
         {
-            for (int j = 0; i < _unitInArea.Count; i++)
+            for (int j = 0; i < _UnitInArea.Count; i++)
             {
-                if (_unitAttackArea._unitWithinArea[i] == _unitInArea[j])
+                if (_unitAttackArea._unitWithinArea[i] == _UnitInArea[j])
                 {
                     _isUnitAlreadyAdded = true;
                 }
