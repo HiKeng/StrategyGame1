@@ -72,10 +72,5 @@ public class Tile_UnitPlacement : Tile
 
             ClickStateManager.Instance._clickDelayCount();
         }
-
-        if(Input.GetMouseButtonDown(1) && ClickStateManager.Instance._isClickAble)
-        {
-            ClickStateManager.Instance._ResetFocus();
-        }
     }
 }

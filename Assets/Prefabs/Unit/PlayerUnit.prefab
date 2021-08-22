@@ -172,10 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d4952b8b98a9146a7a9a49a90978a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isMoving: 0
-  _distancePerTile: 10
-  _tarvelTimePerTile: 1
-  _endingPoint: {x: 0, y: 0, z: 0}
+  _tarvelTimePerTile: 0.5
   _onPrepareMoving:
     m_PersistentCalls:
       m_Calls:
@@ -234,8 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaToAttack: {fileID: 7236407002883465032}
-  _attackInterval: 1
-  _damagePerHit: 20
+  _attackCooldownTime: 0.1
+  _damagePerHit: 5
   _onStartAttack:
     m_PersistentCalls:
       m_Calls: []

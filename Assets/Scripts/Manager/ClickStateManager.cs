@@ -38,6 +38,14 @@ public class ClickStateManager : MonoBehaviour
 
     #endregion
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1) && _isClickAble)
+        {
+            _ResetFocus();
+        }
+    }
+
     public void _clickDelayCount()
     {
         StartCoroutine(_StartClickCooldownCount(_clickCooldown));

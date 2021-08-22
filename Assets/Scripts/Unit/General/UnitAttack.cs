@@ -7,7 +7,7 @@ public class UnitAttack : MonoBehaviour
 {
     [SerializeField] UnitAreaToAttack _areaToAttack;
 
-    [SerializeField] float _attackInterval = 20f;
+    [SerializeField] float _attackCooldownTime = 20f;
     [SerializeField] float _damagePerHit = 20f;
     bool _isAttackOnCooldown = false;
 
@@ -38,7 +38,7 @@ public class UnitAttack : MonoBehaviour
 
             _onStartAttack.Invoke();
 
-            StartCoroutine(_countAttackInterval(_attackInterval));
+            StartCoroutine(_countAttackInterval(_attackCooldownTime));
         }
     }
 

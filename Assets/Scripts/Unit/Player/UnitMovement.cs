@@ -5,15 +5,15 @@ using UnityEngine.Events;
 
 public class UnitMovement : MonoBehaviour
 {
-    [SerializeField] bool _isMoving;
+    bool _isMoving;
 
-    [SerializeField] float _distancePerTile = 10f;
+    float _distancePerTile = 10f;
     [SerializeField] float _tarvelTimePerTile = 1f;
 
     float _speed { get { return _distancePerTile / _tarvelTimePerTile; } }
 
     Tile _endingTile = null;
-    [SerializeField] Vector3 _endingPoint = new Vector3();
+    Vector3 _endingPoint = new Vector3();
 
     [SerializeField] public UnityEvent _onPrepareMoving;
     [SerializeField] UnityEvent _onStartMoving; 
