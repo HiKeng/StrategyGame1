@@ -19,4 +19,13 @@ public class Unit : MonoBehaviour
     {
         _isAvailableForAction = _isAvailable;
     }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.GetComponent<ActionArea>() != null)
+        {
+            other.GetComponent<ActionArea>()._RemoveFromUnitInAreaList(this);
+        }
+    }
 }
