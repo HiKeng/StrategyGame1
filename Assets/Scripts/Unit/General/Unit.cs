@@ -9,8 +9,16 @@ public class Unit : MonoBehaviour
     public bool _isAvailableForAction;
     public Tile _AvailableOnTile;
 
+    [SerializeField] List<GameObject> _areaVisualList;
+
+    public UnityEvent onStart;
     public UnityEvent onFocus;
     public UnityEvent onNotFocus;
+
+    void Start()
+    {
+        onStart.Invoke();
+    }
 
     void OnMouseOver()
     {
@@ -33,6 +41,14 @@ public class Unit : MonoBehaviour
         if(other.GetComponent<ActionArea>() != null)
         {
             other.GetComponent<ActionArea>()._RemoveFromUnitInAreaList(this);
+        }
+    }
+
+    public void _setAreaVisualActive(bool _isActive)
+    {
+        for (int i = 0; i < _areaVisualList.Count; i++)
+        {
+            _areaVisualList[i].SetActive(_isActive);
         }
     }
     
