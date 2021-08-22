@@ -61,7 +61,7 @@ public class Tile_UnitPlacement : Tile
                 }
                 else
                 {
-                    Debug.Log("Can't place a unit");
+                    //Debug.Log("Can't place a unit");
                 }
             }
 
