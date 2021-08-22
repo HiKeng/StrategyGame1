@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public bool _isPlayerControllable = true;
     public bool _isAvailableForAction;
     public Tile _AvailableOnTile;
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble && _isAvailableForAction)
+        if (Input.GetMouseButtonDown(0) 
+            && ClickStateManager.Instance._isClickAble && _isAvailableForAction
+            && _isPlayerControllable)
         {
             ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
         }

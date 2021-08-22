@@ -15,7 +15,7 @@ public class Tile_UnitPlacement : Tile
         return _placingOffset;
     }
 
-    public void _droppingUnit(GameObject _unitPrefab)
+    public void _DroppingUnit(GameObject _unitPrefab)
     {
         _isUnitActive = true;
 
@@ -45,7 +45,7 @@ public class Tile_UnitPlacement : Tile
     {
         if (!_isUnitActive)
         {
-            GetComponent<Tile_UnitPlacement>()._droppingUnit(_unitPrefab);
+            GetComponent<Tile_UnitPlacement>()._DroppingUnit(_unitPrefab);
         }
     }
 
