@@ -56,10 +56,6 @@ public class UnitActionManager : MonoBehaviour
 
     public void _StartMoveUnit(Tile _targetPosition)
     {
-        // Focus unit moveToPosition()
-        // reset focus()
-        // event invoke()
-
         ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._MoveToPosition(_targetPosition);
 
         Debug.Log("Unit start move to " + _targetPosition.name);

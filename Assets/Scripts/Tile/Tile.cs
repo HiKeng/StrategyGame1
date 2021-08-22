@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [HideInInspector] public bool _isUnitActive = false;
+    //public bool _isUnitActive = false;
 
     const int _gridSize = 10;
 
@@ -30,7 +30,6 @@ public class Tile : MonoBehaviour
             GetComponent<Tile_UnitPlacement>()._droppingUnit(_unitPrefab);
         }
     }
-
 
     void OnMouseOver()
     {

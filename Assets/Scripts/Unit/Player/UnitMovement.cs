@@ -6,13 +6,13 @@ using UnityEngine.Events;
 public class UnitMovement : MonoBehaviour
 {
     [SerializeField] bool _isMoving;
-    float _distanceProgress;
 
     [SerializeField] float _distancePerTile = 10f;
     [SerializeField] float _tarvelTimePerTile = 1f;
 
     float _speed { get { return _distancePerTile / _tarvelTimePerTile; } }
 
+    Tile _endingTile = null;
     [SerializeField] Vector3 _endingPoint = new Vector3();
 
     [SerializeField] UnityEvent _onStartMoving; 
@@ -21,11 +21,6 @@ public class UnitMovement : MonoBehaviour
 
     // constant speed
     // move directly to the destination
-
-    void Start()
-    {
-        Vector3 _startingPoint = transform.position;
-    }
 
     void FixedUpdate()
     {
@@ -38,18 +33,32 @@ public class UnitMovement : MonoBehaviour
         if(_isMoving && Vector3.Distance(transform.position, _endingPoint) < 0.001f)
         {
             _isMoving = false;
+            transform.position = _endingPoint;
+            _endingTile.GetComponent<Tile_UnitPlacement>()._AssignNewUnitActive(GetComponent<Unit>());
+
             Debug.Log("End moving");
+
+            _onEndMoving.Invoke();
+        }
+
+        if (_isMoving && Vector3.Distance(transform.position, _endingPoint) > 0.05f && _endingTile.GetComponent<Tile_UnitPlacement>() != null)
+        {
+            _endingTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
         }
     }
 
     public void _MoveToPosition(Tile _destination)
     {
-        Tile_UnitPlacement _unitPlacementOffset = _destination.GetComponent<Tile_UnitPlacement>();
+        Tile_UnitPlacement _tileUnitPlacement = _destination.GetComponent<Tile_UnitPlacement>();
 
-        _endingPoint = _destination.transform.position + _unitPlacementOffset._GetPlacingOffset();
+        _endingPoint = _destination.transform.position + _tileUnitPlacement._GetPlacingOffset();
+        _endingTile = _destination;
+
+        //_tileUnitPlacement._ResetUnitActive();
+
         _isMoving = true;
         Debug.Log("Start move");
-    }
 
-    
+        _onStartMoving.Invoke();
+    }
 }
