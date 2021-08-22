@@ -60,6 +60,8 @@ public class UnitActionManager : MonoBehaviour
         // reset focus()
         // event invoke()
 
+        ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._MoveToPosition(_targetPosition);
+
         Debug.Log("Unit start move to " + _targetPosition.name);
         ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.Idle);
         _onStartMoveUnit.Invoke();

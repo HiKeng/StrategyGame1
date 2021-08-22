@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1964899184285141577}
   - component: {fileID: 1951179488626337018}
   - component: {fileID: 3973977911897459312}
+  - component: {fileID: 6811012952766787481}
   m_Layer: 0
   m_Name: PlayerUnit
   m_TagString: Untagged
@@ -71,6 +72,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d452d86eb30bb624bb9c159435c7f796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6811012952766787481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267897411711766644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d4952b8b98a9146a7a9a49a90978a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isMoving: 0
+  _distancePerTile: 10
+  _tarvelTimePerTile: 1
+  _endingPoint: {x: 0, y: 0, z: 0}
+  _onStartMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  _onUpdateMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEndMoving:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &995703782419238211
 GameObject:
   m_ObjectHideFlags: 0

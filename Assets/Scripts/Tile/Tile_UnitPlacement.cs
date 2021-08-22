@@ -21,4 +21,9 @@ public class Tile_UnitPlacement : Tile
         GameObject _newUnit = Instantiate(_unitPrefab, _placingPos, Quaternion.identity);
         _activeUnit = _newUnit.GetComponent<Unit>();
     }
+
+    public Vector3 _GetPlacingOffset()
+    {
+        return _placingOffset;
+    }
 }
