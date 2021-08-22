@@ -76,8 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d452d86eb30bb624bb9c159435c7f796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isAvailableForAction: 1
-  _AvailableOnTile: {fileID: 0}
+  _health: 100
+  _onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6811012952766787481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +267,7 @@ GameObject:
   - component: {fileID: 7236407002883465039}
   - component: {fileID: 7236407002883465032}
   m_Layer: 0
-  m_Name: Group_AreaToAttack (1)
+  m_Name: Group_AreaToAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

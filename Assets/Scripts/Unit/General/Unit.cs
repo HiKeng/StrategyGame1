@@ -28,4 +28,5 @@ public class Unit : MonoBehaviour
             other.GetComponent<ActionArea>()._RemoveFromUnitInAreaList(this);
         }
     }
+    
 }
