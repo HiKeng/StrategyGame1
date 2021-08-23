@@ -46,10 +46,13 @@ public class ActionArea : Tile
     {
         if (other.GetComponent<Unit>() != null && other != this)
         {
-            if(!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+            if(!_checkIsOnTheSameSide(other.GetComponent<Unit>()))
             {
-                _UnitInArea.Add(other.GetComponent<Unit>());
-                _UpdateAddUnitInArea(other.GetComponent<Unit>());
+                if (!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+                {
+                    _UnitInArea.Add(other.GetComponent<Unit>());
+                    _UpdateAddUnitInArea(other.GetComponent<Unit>());
+                }
             }
         }
     }
@@ -61,6 +64,21 @@ public class ActionArea : Tile
             _UnitInArea.Remove(_unitToRemove);
             _UpdateRemoveUnitInArea(_unitToRemove);
         }
+    }
+
+    bool _checkIsOnTheSameSide(Unit _targetToCompare)
+    {
+        bool _isTheSameSide = false;
+
+        bool _isTargetEnemy = (_targetToCompare.GetComponent<UnitEnemy>() != null) ? true : false;
+        bool _isSelfEnemy = (transform.parent.parent.GetComponent<UnitEnemy>() != null) ? true : false;
+        
+        if(_isSelfEnemy == _isTargetEnemy)
+        {
+            _isTheSameSide = true;
+        }
+
+        return _isTheSameSide;
     }
 
     bool _isAlreadyAdded()

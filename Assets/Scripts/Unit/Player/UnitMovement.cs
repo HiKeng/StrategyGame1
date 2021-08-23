@@ -5,13 +5,11 @@ using UnityEngine.Events;
 
 public class UnitMovement : MonoBehaviour
 {
-    bool _isMoving;
-
-    float _distancePerTile = 10f;
     [SerializeField] float _tarvelTimePerTile = 1f;
 
+    bool _isMoving;
+    float _distancePerTile = 10f;
     float _speed { get { return _distancePerTile / _tarvelTimePerTile; } }
-
     Tile _endingTile = null;
     Vector3 _endingPoint = new Vector3();
 
@@ -48,10 +46,7 @@ public class UnitMovement : MonoBehaviour
             && Vector3.Distance(transform.position, _endingPoint) > 0.05f 
             && GetComponent<Unit>()._AvailableOnTile.GetComponent<Tile_UnitPlacement>() != null)
         {
-            //_endingTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
-
             GetComponent<Unit>()._AvailableOnTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
-
         }
     }
 

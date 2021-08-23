@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class UnitHealth : MonoBehaviour
 {
+    [Header("Properties")]
     public bool _isAlive = true;
     [SerializeField] public float _MaxHealth = 100f;
     [HideInInspector] public float _CurrentHealth = 100f;
@@ -13,6 +14,7 @@ public class UnitHealth : MonoBehaviour
     [Header("UI")]
     [SerializeField] Slider _healthSlider;
 
+    [Header("Events")]
     [SerializeField] UnityEvent _onTakeDamage;
     [SerializeField] UnityEvent _onDead;
 
