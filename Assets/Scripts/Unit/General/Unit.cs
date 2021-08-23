@@ -23,6 +23,8 @@ public class Unit : MonoBehaviour
 
     void OnMouseOver()
     {
+        // check ui raycast
+        // if raycast blocked by UI
         if (Input.GetMouseButtonDown(0) 
             && ClickStateManager.Instance._isClickAble && _isAvailableForAction
             && _isPlayerControllable)
@@ -36,7 +38,6 @@ public class Unit : MonoBehaviour
     {
         _isAvailableForAction = _isAvailable;
     }
-
 
     private void OnTriggerExit(Collider other)
     {

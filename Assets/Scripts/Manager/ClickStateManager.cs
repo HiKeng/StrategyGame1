@@ -26,7 +26,8 @@ public class ClickStateManager : MonoBehaviour
     [SerializeField] UnityEvent _onResetFocus;
     [SerializeField] UnityEvent _onStartUnitPrepareToMove;
 
-
+    // Move to super class
+    // Use 'Generic' 
     #region Singleton
 
     public static ClickStateManager Instance;
