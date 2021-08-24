@@ -28,9 +28,13 @@ public class UnitAttack : MonoBehaviour
             _aimOnUnit = _areaToAttack._unitWithinArea[0];
         }
 
-        if(_aimOnUnit != null)
+        if(_aimOnUnit != null && _aimOnUnit.GetComponent<UnitHealth>()._isAlive)
         {
             _attackToUnit(_aimOnUnit);
+        }
+        else
+        {
+            _aimOnUnit = null;
         }
     }
 
