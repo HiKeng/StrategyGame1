@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 {
-    [HideInInspector] public List<ActionArea> _actionAreaList;
+    [SerializeField] public List<ActionArea> _actionAreaList;
 
-    [HideInInspector] public List<Unit> _unitWithinArea;
+    [SerializeField] public List<Unit> _unitWithinArea;
 
     private void Awake()
     {
@@ -28,6 +28,8 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 
     public void _GetComponentFromChildrens(GameObject _targetParent)
     {
+        _actionAreaList.Clear();
+
         foreach (Transform child in _targetParent.transform)
         {
             if (child.GetComponent<ActionArea>() != null)

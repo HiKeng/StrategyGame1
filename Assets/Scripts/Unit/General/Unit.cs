@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
 
     [SerializeField] GameObject _areaToAttack;
 
-    [HideInInspector] public List<ActionArea> _areaVisualList;
+    [SerializeField] public List<ActionArea> _areaVisualList;
 
     [Header("Event")]
     public UnityEvent onStart;
@@ -66,6 +66,8 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
 
     public void _GetComponentFromChildrens(GameObject _targetParent)
     {
+        _areaVisualList.Clear();
+
         foreach (Transform child in _targetParent.transform)
         {
             if (child.GetComponent<ActionArea>() != null)

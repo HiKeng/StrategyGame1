@@ -20,6 +20,7 @@ public class UnitAttack : MonoBehaviour
     void Update()
     {
         _checkTargetToAttack();
+        _checkTargetOutFromArea();
     }
 
     void _checkTargetToAttack()
@@ -75,7 +76,11 @@ public class UnitAttack : MonoBehaviour
         {
             _areaToAttack._RemoveUnitFromList(_targetUnit);
         }
+    }
 
+    void _checkTargetOutFromArea()
+    {
+        if(!_areaToAttack._unitWithinArea.Contains(_aimOnUnit)) { _aimOnUnit = null; }
     }
 
     public IEnumerator _countAttackInterval(float _cooldownTime)
