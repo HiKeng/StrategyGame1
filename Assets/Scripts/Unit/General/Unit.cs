@@ -74,4 +74,12 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
             }
         }
     }
+
+    public void _ResetFocusOnThisUnit()
+    {
+        if(ClickStateManager.Instance._unitToFocus == this)
+        {
+            ClickStateManager.Instance._ResetFocus();
+        }
+    }
 }

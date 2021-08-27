@@ -19,7 +19,7 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
 
     public ClickState _CurrentState;
 
-    [HideInInspector] public Unit _unitToFocus;
+    [SerializeField] public Unit _unitToFocus;
 
     [Header("Events")]
     [SerializeField] UnityEvent _onFocusOnUnit;
@@ -72,6 +72,9 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
 
         _unitToFocus = null;
         _ChangeClickState(ClickState.Idle);
+
+        UnitActionManager.Instance._CloseActionMenu();
+
         _onResetFocus.Invoke();
     }
 

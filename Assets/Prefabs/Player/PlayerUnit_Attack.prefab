@@ -86,6 +86,7 @@ MonoBehaviour:
   _isAvailableForAction: 1
   _AvailableOnTile: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465038}
+  _areaVisualList: []
   onStart:
     m_PersistentCalls:
       m_Calls:
@@ -180,6 +181,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1941407123222194425, guid: 9ad1c6b1e3af9a94a950beae914d0d7c,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1951179488626337018}
+        m_MethodName: _ResetFocusOnThisUnit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

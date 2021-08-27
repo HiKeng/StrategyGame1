@@ -927,6 +927,18 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1414079937}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &298175953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1570991027}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &302844436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5546,18 +5558,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c13aa7bffa1934192f7db7df2f3b71, type: 3}
---- !u!114 &2014441780 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 721265571}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2030355132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6509,7 +6509,7 @@ PrefabInstance:
     - target: {fileID: 2163193487938216919, guid: e8619b2dbcc76fd4d9bb568c93d033d3,
         type: 3}
       propertyPath: _unitToSpawnList.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2163193487938216919, guid: e8619b2dbcc76fd4d9bb568c93d033d3,
         type: 3}
@@ -6536,12 +6536,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _unitToSpawnList.Array.data[3]._unitPrefab
       value: 
-      objectReference: {fileID: 267897411711766644, guid: dccf0da4323c8ec4f934e606c95df412,
+      objectReference: {fileID: 267897411711766644, guid: 45ca65f4ed977114ba1e5eff09b3001f,
         type: 3}
     - target: {fileID: 2163193487938216919, guid: e8619b2dbcc76fd4d9bb568c93d033d3,
         type: 3}
       propertyPath: _unitToSpawnList.Array.data[3]._tileSpawnPoint
       value: 
-      objectReference: {fileID: 2014441780}
+      objectReference: {fileID: 298175953}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8619b2dbcc76fd4d9bb568c93d033d3, type: 3}
