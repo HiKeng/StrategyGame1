@@ -5,12 +5,14 @@ using UnityEngine.Events;
 
 public class UnitAttack : MonoBehaviour
 {
-    [SerializeField] UnitAreaToAttack _areaToAttack;
-    [SerializeField] Unit _aimOnUnit;
-
+    [Header("Properties")]
     [SerializeField] float _attackCooldownTime = 20f;
     [SerializeField] float _damagePerHit = 20f;
     bool _isAttackOnCooldown = false;
+
+    [Header("References")]
+    [SerializeField] UnitAreaToAttack _areaToAttack;
+    Unit _aimOnUnit;
 
     [Header("Events")]
     [SerializeField] UnityEvent _onStartAttack;
@@ -24,7 +26,6 @@ public class UnitAttack : MonoBehaviour
     {
         if(_areaToAttack._unitWithinArea.Count > 0 && _aimOnUnit == null)
         {
-            //_attackToUnit(_areaToAttack._unitWithinArea[0]);
             _aimOnUnit = _areaToAttack._unitWithinArea[0];
         }
 

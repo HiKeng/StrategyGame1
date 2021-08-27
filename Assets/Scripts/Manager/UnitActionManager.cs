@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UnitActionManager : MonoBehaviour
+public class UnitActionManager : SingletonBase<UnitActionManager>
 {
     [SerializeField] GameObject _actionMenu;
     [SerializeField] GameObject _actionList;
@@ -17,18 +17,6 @@ public class UnitActionManager : MonoBehaviour
     [SerializeField] UnityEvent _onStartPrepareAttackUnit;
 
     [SerializeField] UnityEvent _onStartMoveUnit;
-
-    #region Singleton
-
-    public static UnitActionManager Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    #endregion
-
 
     public void _ShowActionMenu()
     {

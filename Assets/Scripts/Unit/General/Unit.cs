@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 public class Unit : MonoBehaviour
@@ -23,15 +24,15 @@ public class Unit : MonoBehaviour
 
     void OnMouseOver()
     {
-        // check ui raycast
-        // if raycast blocked by UI
-
-        if (Input.GetMouseButtonDown(0) 
+        if(!EventSystem.current.IsPointerOverGameObject())
+        {
+            if (Input.GetMouseButtonDown(0)
             && ClickStateManager.Instance._isClickAble && _isAvailableForAction
             && _isPlayerControllable)
-        {
-            ClickStateManager.Instance._ResetFocus();
-            ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
+            {
+                ClickStateManager.Instance._ResetFocus();
+                ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
+            }
         }
     }
 
@@ -55,5 +56,4 @@ public class Unit : MonoBehaviour
             _areaVisualList[i]._AreaSample.SetActive(_isActive);
         }
     }
-    
 }

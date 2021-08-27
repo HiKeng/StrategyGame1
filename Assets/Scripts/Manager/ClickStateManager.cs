@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ClickStateManager : MonoBehaviour
+public class ClickStateManager : SingletonBase<ClickStateManager>
 {
     [HideInInspector] public bool _isClickAble = true;
 
@@ -25,19 +25,6 @@ public class ClickStateManager : MonoBehaviour
     [SerializeField] UnityEvent _onFocusOnUnit;
     [SerializeField] UnityEvent _onResetFocus;
     [SerializeField] UnityEvent _onStartUnitPrepareToMove;
-
-    // Move to super class
-    // Use 'Generic' 
-    #region Singleton
-
-    public static ClickStateManager Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    #endregion
 
     private void Update()
     {
