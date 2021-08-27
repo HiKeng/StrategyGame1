@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class UnitAreaToAttack : MonoBehaviour
+public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 {
-    [SerializeField] List<ActionArea> _actionAreaList;
+    [HideInInspector] public List<ActionArea> _actionAreaList;
 
-    [SerializeField] public List<Unit> _unitWithinArea;
+    [HideInInspector] public List<Unit> _unitWithinArea;
+
+    private void Awake()
+    {
+        _GetComponentFromChildrens(gameObject);
+    }
 
     public void _RemoveUnitFromList(Unit _targetUnit)
     {
@@ -18,6 +22,17 @@ public class UnitAreaToAttack : MonoBehaviour
             if(_actionAreaList[i]._UnitInArea.Contains(_targetUnit))
             {
                 _actionAreaList[i]._UnitInArea.Remove(_targetUnit);
+            }
+        }
+    }
+
+    public void _GetComponentFromChildrens(GameObject _targetParent)
+    {
+        foreach (Transform child in _targetParent.transform)
+        {
+            if (child.GetComponent<ActionArea>() != null)
+            {
+                _actionAreaList.Add(child.GetComponent<ActionArea>());
             }
         }
     }

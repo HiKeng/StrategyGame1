@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class UnitMovement : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] float _tarvelTimePerTile = 1f;
 
     bool _isMoving;
@@ -13,6 +14,7 @@ public class UnitMovement : MonoBehaviour
     Tile _endingTile = null;
     Vector3 _endingPoint = new Vector3();
 
+    [Header("Events")]
     [SerializeField] public UnityEvent _onPrepareMoving;
     [SerializeField] UnityEvent _onStartMoving; 
     [SerializeField] UnityEvent _onUpdateMoving;

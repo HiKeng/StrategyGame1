@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class UnitActionBar : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] float _maxActionValue = 100f;
     [SerializeField] float _startingActionValue = 50f;
     float _currentActionValue = 0f;

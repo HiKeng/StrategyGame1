@@ -4,18 +4,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class Unit : MonoBehaviour
+public class Unit : MonoBehaviour, IGetComponentFromChilds
 {
     public bool _isPlayerControllable = true;
     [HideInInspector] public bool _isAvailableForAction;
     [HideInInspector] public Tile _AvailableOnTile;
 
-    [SerializeField] List<ActionArea> _areaVisualList;
+    [SerializeField] GameObject _areaToAttack;
+
+    [HideInInspector] public List<ActionArea> _areaVisualList;
 
     [Header("Event")]
     public UnityEvent onStart;
     public UnityEvent onFocus;
     public UnityEvent onNotFocus;
+
+    private void Awake()
+    {
+        _GetComponentFromChildrens(_areaToAttack);
+    }
 
     void Start()
     {
@@ -54,6 +61,17 @@ public class Unit : MonoBehaviour
         for (int i = 0; i < _areaVisualList.Count; i++)
         {
             _areaVisualList[i]._AreaSample.SetActive(_isActive);
+        }
+    }
+
+    public void _GetComponentFromChildrens(GameObject _targetParent)
+    {
+        foreach (Transform child in _targetParent.transform)
+        {
+            if (child.GetComponent<ActionArea>() != null)
+            {
+                _areaVisualList.Add(child.GetComponent<ActionArea>());
+            }
         }
     }
 }

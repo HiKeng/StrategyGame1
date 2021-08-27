@@ -85,22 +85,8 @@ MonoBehaviour:
   _isPlayerControllable: 0
   _isAvailableForAction: 1
   _AvailableOnTile: {fileID: 0}
-  _areaVisualList:
-  - {fileID: 5138771613133053492}
-  - {fileID: 5604958648530328667}
-  - {fileID: 8003497715188376977}
-  - {fileID: 392858103793608022}
-  - {fileID: 4187382339802780539}
-  - {fileID: 8104773885616743280}
-  - {fileID: 1921792202960484573}
-  - {fileID: 5045815985738204162}
-  - {fileID: 1478349803133563437}
-  - {fileID: 6442414764883137906}
-  - {fileID: 5867223875954821552}
-  - {fileID: 8248655331967791109}
-  - {fileID: 2984730026970302530}
-  - {fileID: 940031760322382804}
-  - {fileID: 1902389588504556907}
+  _areaToAttack: {fileID: 267897411711766644}
+  _areaVisualList: []
   onStart:
     m_PersistentCalls:
       m_Calls:
@@ -259,9 +245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382eec1f2749c64e972ed57b77462ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaToAttack: {fileID: 7236407002883465032}
   _attackCooldownTime: 4
   _damagePerHit: 25
+  _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:
       m_Calls: []
