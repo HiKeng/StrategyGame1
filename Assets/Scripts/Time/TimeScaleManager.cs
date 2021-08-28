@@ -14,7 +14,7 @@ public class TimeScaleManager : SingletonBase<TimeScaleManager>
         if (Input.GetKey(KeyCode.Q))
         {
             _isScaleChanged = true;
-            Time.timeScale = 0f;
+            Time.timeScale = _slowTimeScale;
         }
         else if (Input.GetKey(KeyCode.E))
         {

@@ -73,4 +73,12 @@ public class Tile_UnitPlacement : Tile
             ClickStateManager.Instance._clickDelayCount();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.GetComponent<Unit>() != null)
+        {
+            _ResetUnitActive();
+        }
+    }
 }
