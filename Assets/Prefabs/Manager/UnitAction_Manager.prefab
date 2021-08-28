@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionMenu: {fileID: 1495769268534985357}
   _actionList: {fileID: 5137840580422661844}
-  _actionMenuSpawnPointOffset: {x: 275, y: 50, z: 0}
+  _actionMenuSpawnPointOffset: {x: 250, y: 50, z: 0}
   _onShowActionMenu:
     m_PersistentCalls:
       m_Calls: []
