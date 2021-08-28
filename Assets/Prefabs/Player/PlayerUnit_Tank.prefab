@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d4952b8b98a9146a7a9a49a90978a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tarvelTimePerTile: 2
+  _tarvelTimePerTile: 1.5
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxActionValue: 100
   _startingActionValue: 50
-  _speedMultiplier: 7
+  _speedMultiplier: 10
   _isActionBarReady: 0
   _actionBarSlider: {fileID: 3183877006706528084}
   _onActionBarStartMax:
