@@ -9,10 +9,10 @@ public class UnitAttack : MonoBehaviour
     [SerializeField] float _attackCooldownTime = 20f;
     [SerializeField] float _damagePerHit = 20f;
     bool _isAttackOnCooldown = false;
+    [SerializeField] Unit _aimOnUnit;
 
     [Header("References")]
     [SerializeField] UnitAreaToAttack _areaToAttack;
-    Unit _aimOnUnit;
 
     [Header("Events")]
     [SerializeField] UnityEvent _onStartAttack;
@@ -36,7 +36,7 @@ public class UnitAttack : MonoBehaviour
         }
         else
         {
-            _aimOnUnit = null;
+            //_aimOnUnit = null;
         }
     }
 
@@ -72,9 +72,10 @@ public class UnitAttack : MonoBehaviour
 
     void _checkIsTargetDead(Unit _targetUnit)
     {
-        if(!_targetUnit.GetComponent<UnitHealth>()._isAlive)
+        if(!_aimOnUnit.GetComponent<UnitHealth>()._isAlive)
         {
             _areaToAttack._RemoveUnitFromList(_targetUnit);
+            _aimOnUnit = null;
         }
     }
 

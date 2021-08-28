@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 {
-    [HideInInspector] public List<ActionArea> _actionAreaList;
+    [SerializeField] public List<ActionArea> _actionAreaList;
 
-    [HideInInspector] public List<Unit> _unitWithinArea;
+    [SerializeField] public List<Unit> _unitWithinArea;
 
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 
     public void _RemoveUnitFromList(Unit _targetUnit)
     {
+        Debug.Log("Hello");
         _unitWithinArea.Remove(_targetUnit);
 
         for (int i = 0; i < _actionAreaList.Count; i++)

@@ -22,7 +22,7 @@ public class UnitMovement : MonoBehaviour
 
     private void Start()
     {
-        _endingPoint = GetComponent<Unit>()._AvailableOnTile.transform.position;
+        //_endingPoint = GetComponent<Unit>()._AvailableOnTile.transform.position;
     }
 
     void FixedUpdate()
@@ -44,7 +44,7 @@ public class UnitMovement : MonoBehaviour
             _onEndMoving.Invoke();
         }
 
-        if (_isMoving 
+        if (_isMoving
             && Vector3.Distance(transform.position, _endingPoint) > 0.05f 
             && GetComponent<Unit>()._AvailableOnTile.GetComponent<Tile_UnitPlacement>() != null)
         {
