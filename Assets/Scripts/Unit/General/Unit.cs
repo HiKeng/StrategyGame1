@@ -8,7 +8,7 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
 {
     public bool _isPlayerControllable = true;
     [HideInInspector] public bool _isAvailableForAction;
-    [HideInInspector] public Tile _AvailableOnTile;
+    public Tile _AvailableOnTile;
     
     [SerializeField] GameObject _areaToAttack;
 

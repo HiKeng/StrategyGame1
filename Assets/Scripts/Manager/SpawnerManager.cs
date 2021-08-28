@@ -22,8 +22,11 @@ public class SpawnerManager : MonoBehaviour
     {
         for (int i = 0; i < _unitToSpawnList.Count; i++)
         {
-            Tile_UnitPlacement _tilePlacement = _unitToSpawnList[i]._tileSpawnPoint.GetComponent<Tile_UnitPlacement>();
-            _tilePlacement._DroppingUnit(_unitToSpawnList[i]._unitPrefab);
+            if(_unitToSpawnList[i]._unitPrefab != null && _unitToSpawnList[i]._tileSpawnPoint != null)
+            {
+                Tile_UnitPlacement _tilePlacement = _unitToSpawnList[i]._tileSpawnPoint.GetComponent<Tile_UnitPlacement>();
+                _tilePlacement._DroppingUnit(_unitToSpawnList[i]._unitPrefab);
+            }
         }
     }
 }
