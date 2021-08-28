@@ -46,6 +46,7 @@ public class UnitActionManager : SingletonBase<UnitActionManager>
         {
             ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.UnitPrepareToMove);
             _onStartPrepareMoveUnit.Invoke();
+
             ClickStateManager.Instance._ResetFocusWithOutClearUnit();
 
             _actionMenu.SetActive(false);

@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedUpScale: 2
-  _slowTimeScale: 0.2
+  _slowTimeScale: 0.5

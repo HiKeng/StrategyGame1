@@ -54,12 +54,6 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
         {
             other.GetComponent<ActionArea>()._RemoveFromUnitInAreaList(this);
         }
-
-        //if(other.GetComponent<Tile_UnitPlacement>() != null)
-        //{
-        //    other.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
-        //    Debug.LogWarning("Reset");
-        //}
     }
 
     public void _setAreaVisualActive(bool _isActive)

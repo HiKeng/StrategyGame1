@@ -23,7 +23,7 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
 
     [Header("Events")]
     [SerializeField] UnityEvent _onFocusOnUnit;
-    [SerializeField] UnityEvent _onResetFocus;
+    [SerializeField] public UnityEvent _onResetFocus;
 
     private void Update()
     {
