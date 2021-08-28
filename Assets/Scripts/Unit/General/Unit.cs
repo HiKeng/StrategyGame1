@@ -84,4 +84,12 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
             ClickStateManager.Instance._ResetFocus();
         }
     }
+
+    public void _RemoveAvailableOnTile()
+    {
+        if (_AvailableOnTile.GetComponent<Tile_UnitPlacement>()._currentActiveUnitOnTile = this)
+        {
+            _AvailableOnTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+        }
+    }
 }

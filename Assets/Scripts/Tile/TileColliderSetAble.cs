@@ -45,4 +45,15 @@ public class TileColliderSetAble : MonoBehaviour, IGetComponentFromChilds
             }
         }
     }
+
+    public void _RemoveAvailableOnUnitDead(Unit _targetUnit)
+    {
+        foreach (BoxCollider tile in _tileColliderList)
+        {
+            if (tile.gameObject.GetComponent<Tile_UnitPlacement>()._currentActiveUnitOnTile == _targetUnit)
+            {
+                tile.gameObject.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+            }
+        }
+    }
 }
