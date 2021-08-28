@@ -8,7 +8,7 @@ public class UnitMovement : MonoBehaviour
     [Header("Properties")]
     [SerializeField] float _tarvelTimePerTile = 1f;
 
-    bool _isMoving;
+    public bool _isMoving;
     float _distancePerTile = 10f;
     float _speed { get { return _distancePerTile / _tarvelTimePerTile; } }
     Tile _endingTile = null;

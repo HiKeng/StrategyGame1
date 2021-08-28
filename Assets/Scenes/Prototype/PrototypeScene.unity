@@ -924,13 +924,28 @@ PrefabInstance:
     - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
         type: 3}
       propertyPath: _positionToMove.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
         type: 3}
       propertyPath: _positionToMove.Array.data[0]._tilePostion
       value: 
       objectReference: {fileID: 1926079550}
+    - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
+        type: 3}
+      propertyPath: _positionToMove.Array.data[1]._tilePostion
+      value: 
+      objectReference: {fileID: 780209983}
+    - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
+        type: 3}
+      propertyPath: _positionToMove.Array.data[0]._waitTimeBeforeMove
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
+        type: 3}
+      propertyPath: _positionToMove.Array.data[1]._waitTimeBeforeMove
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2648,6 +2663,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &780209983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1271449427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &801782452
 PrefabInstance:
   m_ObjectHideFlags: 0
