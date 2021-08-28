@@ -76,9 +76,6 @@ public class Tile_UnitPlacement : Tile
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.GetComponent<Unit>() != null)
-        {
-            _ResetUnitActive();
-        }
+        _ResetUnitActive();
     }
 }
