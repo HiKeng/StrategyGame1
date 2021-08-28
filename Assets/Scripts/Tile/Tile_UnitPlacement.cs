@@ -7,7 +7,7 @@ public class Tile_UnitPlacement : Tile
 {
     public bool _isUnitActive = false;
 
-    [SerializeField] Unit _currentActiveUnitOnTile = null;
+    [SerializeField] public Unit _currentActiveUnitOnTile = null;
     [SerializeField] Vector3 _placingOffset = new Vector3(0f, 10f, 0f);
 
     public Vector3 _GetPlacingOffset()

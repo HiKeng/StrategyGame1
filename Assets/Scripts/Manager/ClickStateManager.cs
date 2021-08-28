@@ -24,7 +24,6 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
     [Header("Events")]
     [SerializeField] UnityEvent _onFocusOnUnit;
     [SerializeField] UnityEvent _onResetFocus;
-    [SerializeField] UnityEvent _onStartUnitPrepareToMove;
 
     private void Update()
     {
@@ -80,7 +79,6 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
 
     public void _ResetFocusWithOutClearUnit()
     {
-
         _ChangeClickState(ClickState.Idle);
         _onResetFocus.Invoke();
     }

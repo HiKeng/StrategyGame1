@@ -48,7 +48,7 @@ public class UnitActionManager : SingletonBase<UnitActionManager>
             _onStartPrepareMoveUnit.Invoke();
             ClickStateManager.Instance._ResetFocusWithOutClearUnit();
 
-            _CloseActionMenu();
+            _actionMenu.SetActive(false);
 
             ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._onPrepareMoving.Invoke();
         }
@@ -67,6 +67,8 @@ public class UnitActionManager : SingletonBase<UnitActionManager>
             {
                 Debug.LogError("UnitToFocus == null");
             }
+
+            if(_targetPosition.GetComponent<Tile_UnitPlacement>()._currentActiveUnitOnTile != null) { return; }
 
             ClickStateManager.Instance._unitToFocus.GetComponent<UnitMovement>()._MoveToPosition(_targetPosition);
 

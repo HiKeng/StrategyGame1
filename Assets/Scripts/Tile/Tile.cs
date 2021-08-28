@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] GameObject _areaSample;
+
     const int _gridSize = 10;
 
     public int GetGridSize()
@@ -19,5 +21,10 @@ public class Tile : MonoBehaviour
         Mathf.RoundToInt(transform.position.x / _gridSize),
         Mathf.RoundToInt(transform.position.z / _gridSize)
         );
+    }
+
+    public void _setAreaSampleActive(bool _isActive)
+    {
+        _areaSample.SetActive(_isActive);
     }
 }
