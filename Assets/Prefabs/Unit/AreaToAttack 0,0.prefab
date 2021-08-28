@@ -250,6 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaSample: {fileID: 0}
+  _unitPlacement: {fileID: 0}
+  _IsShowArea: 0
 --- !u!114 &2539032220279804931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c7fc0e902b1a04d8e624a7f4f16f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaSample: {fileID: 0}
+  _areaSample: {fileID: 2073082330534806287}
+  _unitPlacement: {fileID: 0}
+  _IsShowArea: 0
   _AreaSample: {fileID: 2073082330534806287}
   _UnitInArea: []
 --- !u!1 &6722256187575497551

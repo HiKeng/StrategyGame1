@@ -349,6 +349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaSample: {fileID: 198618888354206433}
+  _unitPlacement: {fileID: 5859133443186579966}
+  _IsShowArea: 0
 --- !u!114 &5859133443186579966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed3d01f5a582b143aa8fed827df05c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaSample: {fileID: 0}
+  _areaSample: {fileID: 198618888354206433}
+  _unitPlacement: {fileID: 5859133443186579966}
+  _IsShowArea: 0
   _isUnitActive: 0
   _currentActiveUnitOnTile: {fileID: 0}
   _placingOffset: {x: 0, y: 10, z: 0}

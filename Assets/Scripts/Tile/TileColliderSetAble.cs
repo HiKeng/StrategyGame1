@@ -41,7 +41,7 @@ public class TileColliderSetAble : MonoBehaviour, IGetComponentFromChilds
         {
             if(tile.gameObject.GetComponent<Tile_UnitPlacement>()._currentActiveUnitOnTile == null)
             {
-                tile.gameObject.GetComponent<Tile>()._setAreaSampleActive(_isAcitve);
+                tile.gameObject.GetComponent<Tile>()._areaSample.SetActive(_isAcitve);
             }
         }
     }
