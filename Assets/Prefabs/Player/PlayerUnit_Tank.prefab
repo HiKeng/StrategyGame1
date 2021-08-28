@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxActionValue: 100
   _startingActionValue: 50
-  _speedMultiplier: 5
+  _speedMultiplier: 7
   _isActionBarReady: 0
   _actionBarSlider: {fileID: 3183877006706528084}
   _onActionBarStartMax:

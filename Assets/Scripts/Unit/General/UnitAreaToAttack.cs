@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 {
-    [SerializeField] public List<ActionArea> _actionAreaList;
+    [HideInInspector] public List<ActionArea> _actionAreaList;
 
-    [SerializeField] public List<Unit> _unitWithinArea;
+    [HideInInspector] public List<Unit> _unitWithinArea;
 
     private void Awake()
     {
