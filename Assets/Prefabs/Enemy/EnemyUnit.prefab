@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackCooldownTime: 4
   _damagePerHit: 25
+  _aimOnUnit: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:
@@ -301,7 +302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198c3b864e9ca04cb47e5ac96e73fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _positionToMove: []
+  _positionToMove:
+  - _tilePostion: {fileID: 0}
+    _waitTimeBeforeMove: 2
+  - _tilePostion: {fileID: 0}
+    _waitTimeBeforeMove: 3
 --- !u!95 &5328988261486629686
 Animator:
   serializedVersion: 3

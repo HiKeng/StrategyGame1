@@ -21,6 +21,14 @@ public class UnitAttack : MonoBehaviour
     {
         _checkTargetToAttack();
         _checkTargetOutFromArea();
+
+        if(_aimOnUnit != null)
+        {
+            if (_aimOnUnit.GetComponent<UnitHealth>()._isAlive == false)
+            {
+                _aimOnUnit = null;
+            }
+        }
     }
 
     void _checkTargetToAttack()
