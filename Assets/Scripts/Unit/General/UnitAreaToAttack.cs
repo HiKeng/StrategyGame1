@@ -15,7 +15,6 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 
     public void _RemoveUnitFromList(Unit _targetUnit)
     {
-        Debug.Log("Hello");
         _unitWithinArea.Remove(_targetUnit);
 
         for (int i = 0; i < _actionAreaList.Count; i++)

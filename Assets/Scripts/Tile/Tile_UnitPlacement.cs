@@ -71,8 +71,6 @@ public class Tile_UnitPlacement : Tile
                 Debug.LogWarning($"Move");
             }
 
-            Debug.LogWarning($"Clicked on {this.name}");
-
             ClickStateManager.Instance._clickDelayCount();
         }
     }

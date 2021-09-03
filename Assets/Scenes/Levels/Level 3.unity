@@ -2902,17 +2902,17 @@ PrefabInstance:
     - target: {fileID: 2445349317908958294, guid: 85d7a3821bf219d4a962a8bc0ffa5243,
         type: 3}
       propertyPath: _positionToMove.Array.data[0]._waitTimeBeforeMove
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2445349317908958294, guid: 85d7a3821bf219d4a962a8bc0ffa5243,
         type: 3}
       propertyPath: _positionToMove.Array.data[1]._waitTimeBeforeMove
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6811012952766787481, guid: 85d7a3821bf219d4a962a8bc0ffa5243,
         type: 3}
       propertyPath: _tarvelTimePerTile
-      value: 0.5
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 85d7a3821bf219d4a962a8bc0ffa5243,
         type: 3}

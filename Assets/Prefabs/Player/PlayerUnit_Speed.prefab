@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d4952b8b98a9146a7a9a49a90978a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tarvelTimePerTile: 0.2
+  _tarvelTimePerTile: 0.35
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
