@@ -1154,6 +1154,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2052260900}
     m_Modifications:
+    - target: {fileID: 5859133443186579966, guid: 58c13aa7bffa1934192f7db7df2f3b71,
+        type: 3}
+      propertyPath: _currentActiveUnitOnTile
+      value: 
+      objectReference: {fileID: 470645651}
     - target: {fileID: 6722256185824723142, guid: 58c13aa7bffa1934192f7db7df2f3b71,
         type: 3}
       propertyPath: m_Text
@@ -1399,6 +1404,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 459237144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &470645651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1951179488626337018, guid: 185ec753a998759488321db1fbb77352,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045701229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cd290cb995b70419eb7a2657004ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &487124425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5754,6 +5771,16 @@ PrefabInstance:
       propertyPath: _AvailableOnTile
       value: 
       objectReference: {fileID: 1926079550}
+    - target: {fileID: 3680439516147421089, guid: 185ec753a998759488321db1fbb77352,
+        type: 3}
+      propertyPath: _attackCooldownTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680439516147421089, guid: 185ec753a998759488321db1fbb77352,
+        type: 3}
+      propertyPath: _damagePerHit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 185ec753a998759488321db1fbb77352,
         type: 3}
       propertyPath: m_AnchorMax.x

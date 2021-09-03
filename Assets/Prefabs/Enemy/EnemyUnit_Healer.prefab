@@ -300,7 +300,7 @@ MonoBehaviour:
   _damagePerHit: 20
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
-  _areaToAttack: {fileID: 0}
+  _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:
       m_Calls: []

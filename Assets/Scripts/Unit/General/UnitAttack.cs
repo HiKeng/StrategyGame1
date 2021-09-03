@@ -36,6 +36,7 @@ public class UnitAttack : MonoBehaviour
         if(_areaToAttack._unitWithinArea.Count > 0 && _aimOnUnit == null)
         {
             _aimOnUnit = _areaToAttack._unitWithinArea[0];
+            Debug.LogWarning($"{this.name} added {_areaToAttack._unitWithinArea[0].name} to list.");
         }
 
         if(_aimOnUnit != null && _aimOnUnit.GetComponent<UnitHealth>()._isAlive)
@@ -92,7 +93,7 @@ public class UnitAttack : MonoBehaviour
         if(!_areaToAttack._unitWithinArea.Contains(_aimOnUnit)) { _aimOnUnit = null; }
     }
 
-    public virtual IEnumerator _countAttackInterval(float _cooldownTime)
+    public IEnumerator _countAttackInterval(float _cooldownTime)
     {
         _isAttackOnCooldown = true;
         yield return new WaitForSeconds(_cooldownTime);
