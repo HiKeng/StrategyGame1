@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AttackArea_EdgeGlow : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer _frontGlow, _backGlow, _rightGlow, _leftGlow;
+    [SerializeField] bool _hasFront, _hasBack, _hasRight, _hasLeft;
+
 
     void Start()
     {
