@@ -8,6 +8,8 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
 
     [SerializeField] public List<Unit> _unitWithinArea;
 
+    public bool _isHealUnit = false;
+
     private void Awake()
     {
         _GetComponentFromChildrens(gameObject);

@@ -38,6 +38,8 @@ public class UnitHealth : MonoBehaviour
 
     public virtual void _TakeDamage(float _damageToTake)
     {
+        Debug.LogWarning("Take damage");
+
         _CurrentHealth -= _damageToTake;
 
         _onTakeDamage.Invoke();
@@ -45,6 +47,17 @@ public class UnitHealth : MonoBehaviour
         if(_CurrentHealth <= 0)
         {
             _dead();
+        }
+    }
+
+    public virtual void _Heal(float _healAmount)
+    {
+        Debug.LogWarning("Heal");
+        _CurrentHealth += _healAmount;
+
+        if(_CurrentHealth > _MaxHealth)
+        {
+            _CurrentHealth = _MaxHealth;
         }
     }
 

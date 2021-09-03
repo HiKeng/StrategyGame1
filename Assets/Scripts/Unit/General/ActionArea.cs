@@ -46,12 +46,29 @@ public class ActionArea : Tile
     {
         if (other.GetComponent<Unit>() != null && other != this)
         {
-            if(!_checkIsOnTheSameSide(other.GetComponent<Unit>()))
+            // Attack
+            if(!_unitAttackArea._isHealUnit)
             {
-                if (!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+                if (!_checkIsOnTheSameSide(other.GetComponent<Unit>()))
                 {
-                    _UnitInArea.Add(other.GetComponent<Unit>());
-                    _UpdateAddUnitInArea(other.GetComponent<Unit>());
+                    if (!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+                    {
+                        _UnitInArea.Add(other.GetComponent<Unit>());
+                        _UpdateAddUnitInArea(other.GetComponent<Unit>());
+                    }
+                }
+            }
+
+            // Heal
+            if (_unitAttackArea._isHealUnit)
+            {
+                if (_checkIsOnTheSameSide(other.GetComponent<Unit>()))
+                {
+                    if (!_unitAttackArea._unitWithinArea.Contains(other.GetComponent<Unit>()))
+                    {
+                        _UnitInArea.Add(other.GetComponent<Unit>());
+                        _UpdateAddUnitInArea(other.GetComponent<Unit>());
+                    }
                 }
             }
         }
