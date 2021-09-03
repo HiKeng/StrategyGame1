@@ -5771,16 +5771,6 @@ PrefabInstance:
       propertyPath: _AvailableOnTile
       value: 
       objectReference: {fileID: 1926079550}
-    - target: {fileID: 3680439516147421089, guid: 185ec753a998759488321db1fbb77352,
-        type: 3}
-      propertyPath: _attackCooldownTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3680439516147421089, guid: 185ec753a998759488321db1fbb77352,
-        type: 3}
-      propertyPath: _damagePerHit
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 185ec753a998759488321db1fbb77352,
         type: 3}
       propertyPath: m_AnchorMax.x

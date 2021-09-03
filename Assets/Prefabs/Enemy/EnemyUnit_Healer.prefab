@@ -296,8 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966b1efc773caff40b2cc6e58d4905f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackCooldownTime: 20
-  _damagePerHit: 20
+  _attackCooldownTime: 1
+  _damagePerHit: 100
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465032}
