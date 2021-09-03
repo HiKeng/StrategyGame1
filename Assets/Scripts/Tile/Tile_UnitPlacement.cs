@@ -68,7 +68,6 @@ public class Tile_UnitPlacement : Tile
             if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.UnitPrepareToMove)
             {
                 UnitActionManager.Instance._StartMoveUnit(GetComponent<Tile>());
-                Debug.LogWarning($"Move");
             }
 
             ClickStateManager.Instance._clickDelayCount();
