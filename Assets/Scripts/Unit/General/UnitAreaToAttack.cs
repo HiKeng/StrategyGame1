@@ -38,4 +38,40 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
             }
         }
     }
+
+    public void _CheckNearbyTile(AttackArea_EdgeGlow _edgeGlowToCheck)
+    {
+        Vector2Int _targetPosition = _edgeGlowToCheck.transform.parent.GetComponent<Tile>().GetGridPos();
+
+        Vector2Int _frontPositionToCheck = new Vector2Int(_targetPosition.x, _targetPosition.y + 1);
+        Vector2Int _backPositionToCheck = new Vector2Int(_targetPosition.x, _targetPosition.y - 1);
+        Vector2Int _rightPositionToCheck = new Vector2Int(_targetPosition.x + 1, _targetPosition.y);
+        Vector2Int _leftPositionToCheck = new Vector2Int(_targetPosition.x - 1, _targetPosition.y);
+
+        for (int i = 0; i < _actionAreaList.Count; i++)
+        {
+            if(_actionAreaList[i].GetComponent<Tile>().GetGridPos() != _targetPosition)
+            {
+                if (_targetPosition == _frontPositionToCheck)
+                {
+                    _edgeGlowToCheck._hasFront = true;
+                }
+
+                if (_targetPosition == _backPositionToCheck)
+                {
+                    _edgeGlowToCheck._hasBack = true;
+                }
+
+                if (_targetPosition == _rightPositionToCheck)
+                {
+                    _edgeGlowToCheck._hasRight = true;
+                }
+
+                if (_targetPosition == _leftPositionToCheck)
+                {
+                    _edgeGlowToCheck._hasLeft = true;
+                }
+            }
+        }
+    }
 }

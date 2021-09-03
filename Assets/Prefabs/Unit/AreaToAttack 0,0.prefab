@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 3672146962239920836}
   - component: {fileID: 5825559628000449579}
   - component: {fileID: 2539032220279804931}
+  - component: {fileID: 2419995979426001317}
   m_Layer: 2
   m_Name: AreaToAttack 0,0
   m_TagString: Untagged
@@ -676,6 +677,19 @@ MonoBehaviour:
   _IsShowArea: 0
   _AreaSample: {fileID: 2073082330534806287}
   _UnitInArea: []
+--- !u!114 &2419995979426001317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722256185918204760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559a9ef69d4a4994d8794355ebf79117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _edgeGlowGroup: {fileID: 2541052267779018969}
 --- !u!1 &6722256187575497551
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +949,10 @@ MonoBehaviour:
   _backGlow: {fileID: 1440494028987415659}
   _rightGlow: {fileID: 6805162418911767146}
   _leftGlow: {fileID: 733438058672020625}
+  _hasFront: 0
+  _hasBack: 0
+  _hasRight: 0
+  _hasLeft: 0
 --- !u!1001 &287593758795861380
 PrefabInstance:
   m_ObjectHideFlags: 0
