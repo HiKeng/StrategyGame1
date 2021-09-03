@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackCooldownTime: 0.2
   _damagePerHit: 2
+  _aimOnUnit: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:
