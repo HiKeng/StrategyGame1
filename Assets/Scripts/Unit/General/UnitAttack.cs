@@ -6,18 +6,18 @@ using UnityEngine.Events;
 public class UnitAttack : MonoBehaviour
 {
     [Header("Properties")]
-    [SerializeField] float _attackCooldownTime = 20f;
-    [SerializeField] float _damagePerHit = 20f;
-    bool _isAttackOnCooldown = false;
-    [SerializeField] Unit _aimOnUnit;
+    [SerializeField] public float _attackCooldownTime = 20f;
+    [SerializeField] public float _damagePerHit = 20f;
+    public bool _isAttackOnCooldown = false;
+    [SerializeField] public Unit _aimOnUnit;
 
     [Header("References")]
-    [SerializeField] UnitAreaToAttack _areaToAttack;
+    [SerializeField] public UnitAreaToAttack _areaToAttack;
 
     [Header("Events")]
-    [SerializeField] UnityEvent _onStartAttack;
+    [SerializeField] public UnityEvent _onStartAttack;
 
-    void Update()
+    public virtual void Update()
     {
         _checkTargetToAttack();
         _checkTargetOutFromArea();
@@ -31,7 +31,7 @@ public class UnitAttack : MonoBehaviour
         }
     }
 
-    void _checkTargetToAttack()
+    public virtual void _checkTargetToAttack()
     {
         if(_areaToAttack._unitWithinArea.Count > 0 && _aimOnUnit == null)
         {
@@ -48,7 +48,7 @@ public class UnitAttack : MonoBehaviour
         }
     }
 
-    void _attackToUnit(Unit _targetUnit)
+    public virtual void _attackToUnit(Unit _targetUnit)
     {
         if(_targetUnit.gameObject.active == true && !_isAttackOnCooldown)
         {
@@ -66,7 +66,7 @@ public class UnitAttack : MonoBehaviour
         }
     }
 
-    private void AttackUnit(Unit _targetUnit)
+    public virtual void AttackUnit(Unit _targetUnit)
     {
         _targetUnit.GetComponent<UnitHealth>()._TakeDamage(_damagePerHit);
         Debug.Log($"{this.name} attack to {_targetUnit.name}");
@@ -78,7 +78,7 @@ public class UnitAttack : MonoBehaviour
         _checkIsTargetDead(_targetUnit);
     }
 
-    void _checkIsTargetDead(Unit _targetUnit)
+    public virtual void _checkIsTargetDead(Unit _targetUnit)
     {
         if(!_aimOnUnit.GetComponent<UnitHealth>()._isAlive)
         {
@@ -87,12 +87,12 @@ public class UnitAttack : MonoBehaviour
         }
     }
 
-    void _checkTargetOutFromArea()
+    public virtual void _checkTargetOutFromArea()
     {
         if(!_areaToAttack._unitWithinArea.Contains(_aimOnUnit)) { _aimOnUnit = null; }
     }
 
-    public IEnumerator _countAttackInterval(float _cooldownTime)
+    public virtual IEnumerator _countAttackInterval(float _cooldownTime)
     {
         _isAttackOnCooldown = true;
         yield return new WaitForSeconds(_cooldownTime);
