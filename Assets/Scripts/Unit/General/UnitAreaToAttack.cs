@@ -52,22 +52,22 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
         {
             if(_actionAreaList[i].GetComponent<Tile>().GetGridPos() != _targetPosition)
             {
-                if (_targetPosition == _frontPositionToCheck)
+                if (_actionAreaList[i].GetComponent<Tile>().GetGridPos() == _frontPositionToCheck)
                 {
                     _edgeGlowToCheck._hasFront = true;
                 }
 
-                if (_targetPosition == _backPositionToCheck)
+                if (_actionAreaList[i].GetComponent<Tile>().GetGridPos() == _backPositionToCheck)
                 {
                     _edgeGlowToCheck._hasBack = true;
                 }
 
-                if (_targetPosition == _rightPositionToCheck)
+                if (_actionAreaList[i].GetComponent<Tile>().GetGridPos() == _rightPositionToCheck)
                 {
                     _edgeGlowToCheck._hasRight = true;
                 }
 
-                if (_targetPosition == _leftPositionToCheck)
+                if (_actionAreaList[i].GetComponent<Tile>().GetGridPos() == _leftPositionToCheck)
                 {
                     _edgeGlowToCheck._hasLeft = true;
                 }

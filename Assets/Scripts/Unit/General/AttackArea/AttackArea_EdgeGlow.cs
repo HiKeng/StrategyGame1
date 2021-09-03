@@ -6,12 +6,11 @@ public class AttackArea_EdgeGlow : MonoBehaviour
 {
     [SerializeField] SpriteRenderer _frontGlow, _backGlow, _rightGlow, _leftGlow;
     [SerializeField] public bool _hasFront, _hasBack, _hasRight, _hasLeft;
+    [HideInInspector] UnitAreaToAttack _unitAreaToAttack;
 
-    [SerializeField] UnitAreaToAttack _unitAreaToAttack;
     void Start()
     {
         _unitAreaToAttack = transform.parent.parent.GetComponent<UnitAreaToAttack>();
-
         _unitAreaToAttack._CheckNearbyTile(GetComponent<AttackArea_EdgeGlow>());
     }
 }
