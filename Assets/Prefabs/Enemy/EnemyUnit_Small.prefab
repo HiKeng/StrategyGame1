@@ -154,7 +154,7 @@ MonoBehaviour:
         m_MethodName: _SpawnVFX
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1720192549595148090, guid: fd0b79b493a9e524a8f8ca3c7982b024,
+          m_ObjectArgument: {fileID: 130626, guid: e7208592fcd84db46be48b5bce0525a5,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -164,7 +164,19 @@ MonoBehaviour:
         m_CallState: 2
   _onHeal:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1372069453437507051}
+        m_MethodName: _SpawnVFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 152564, guid: 0e4a7fa9fd28f154b91c98ee6fe8ebea,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onDead:
     m_PersistentCalls:
       m_Calls:
