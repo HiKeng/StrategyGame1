@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlive: 1
-  _MaxHealth: 100
+  _MaxHealth: 40
   _CurrentHealth: 100
   _healthSlider: {fileID: 2477036761217603945}
   _onTakeDamage:
@@ -162,6 +162,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onHeal:
+    m_PersistentCalls:
+      m_Calls: []
   _onDead:
     m_PersistentCalls:
       m_Calls:
@@ -806,6 +809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionAreaList: []
   _unitWithinArea: []
+  _isHealUnit: 0
 --- !u!1001 &2760638432740700501
 PrefabInstance:
   m_ObjectHideFlags: 0

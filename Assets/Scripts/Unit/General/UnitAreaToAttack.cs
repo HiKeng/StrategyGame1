@@ -15,6 +15,11 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
         _GetComponentFromChildrens(gameObject);
     }
 
+    void Update()
+    {
+        _checkUnitDead();
+    }
+
     public void _RemoveUnitFromList(Unit _targetUnit)
     {
         _unitWithinArea.Remove(_targetUnit);
@@ -73,6 +78,17 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
                 {
                     _edgeGlowToCheck._hasLeft = true;
                 }
+            }
+        }
+    }
+
+    void _checkUnitDead()
+    {
+        for (int i = 0; i < _unitWithinArea.Count; i++)
+        {
+            if(_unitWithinArea[i].GetComponent<UnitHealth>()._isAlive == false)
+            {
+                _unitWithinArea.Remove(_unitWithinArea[i]);
             }
         }
     }

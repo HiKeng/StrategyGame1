@@ -16,6 +16,7 @@ public class UnitHealth : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] UnityEvent _onTakeDamage;
+    [SerializeField] UnityEvent _onHeal;
     [SerializeField] UnityEvent _onDead;
 
 
@@ -59,6 +60,8 @@ public class UnitHealth : MonoBehaviour
         {
             _CurrentHealth = _MaxHealth;
         }
+
+        _onHeal.Invoke();
     }
 
     public void _dead()
