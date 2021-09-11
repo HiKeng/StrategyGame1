@@ -55,7 +55,7 @@ public class Tile_UnitPlacement : Tile
     {
         if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
         {
-            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle
+            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.PrepareToDeploy
                 && UnitDeployManager.Instance._isUnitDeployPhase)
             {
                 if (!_isUnitActive && UnitDeployManager.Instance._IsNotExceedUnitLimitAmount())

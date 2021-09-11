@@ -12,6 +12,7 @@ public class ClickStateManager : SingletonBase<ClickStateManager>
     public enum ClickState
     {
         Idle,
+        PrepareToDeploy,
         UnitFocus,
         UnitPrepareToMove,
         UnitPrepareToAttack
