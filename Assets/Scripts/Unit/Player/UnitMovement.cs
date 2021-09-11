@@ -20,11 +20,6 @@ public class UnitMovement : MonoBehaviour
     [SerializeField] UnityEvent _onUpdateMoving;
     [SerializeField] UnityEvent _onEndMoving;
 
-    private void Start()
-    {
-        //_endingPoint = GetComponent<Unit>()._AvailableOnTile.transform.position;
-    }
-
     void FixedUpdate()
     {
         if (_isMoving)
