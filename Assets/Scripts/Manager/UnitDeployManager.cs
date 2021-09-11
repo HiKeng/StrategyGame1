@@ -7,13 +7,12 @@ using TMPro;
 public class UnitDeployManager : SingletonBase<UnitDeployManager>
 {
     [SerializeField] int _unitLimitAmount = 3;
-    [SerializeField] int _currentUnitAmount = 0;
+    int _currentUnitAmount = 0;
 
     [SerializeField] TextMeshProUGUI _amountLeftUI;
 
-    public GameObject _UnitPrefab;
-
-    public bool _isUnitDeployPhase = true;
+    [HideInInspector] public GameObject _UnitPrefab;
+    [HideInInspector] public bool _isUnitDeployPhase = true;
 
     [Header("Events")]
     public UnityEvent _onStart;
@@ -54,6 +53,4 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
         _isUnitDeployPhase = false;
         _onEndDeployPhase.Invoke();
     }
-
-    
 }
