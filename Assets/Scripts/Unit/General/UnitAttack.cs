@@ -22,6 +22,8 @@ public class UnitAttack : MonoBehaviour
 
     public virtual void Update()
     {
+        if (UnitDeployManager.Instance._isUnitDeployPhase) { return; }
+
         _checkTargetToAttack();
         _checkTargetOutFromArea();
 

@@ -26,11 +26,13 @@ public class UnitActionBar : MonoBehaviour
         _currentActionValue = _startingActionValue;
 
         _actionBarSlider.maxValue = _maxActionValue;
-        _actionBarSlider.value = _actionBarSlider.maxValue;
+        _actionBarSlider.value = _startingActionValue;
     }
 
     void Update()
     {
+        if(UnitDeployManager.Instance._isUnitDeployPhase) { return; }
+
         if(!_isActionBarReady)
         {
             _currentActionValue += Time.deltaTime * _speedMultiplier;

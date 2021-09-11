@@ -35,7 +35,8 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
         {
             if (Input.GetMouseButtonDown(0)
             && ClickStateManager.Instance._isClickAble && _isAvailableForAction
-            && _isPlayerControllable)
+            && _isPlayerControllable
+            && !UnitDeployManager.Instance._isUnitDeployPhase)
             {
                 ClickStateManager.Instance._ResetFocus();
                 ClickStateManager.Instance._FocusOnUnit(GetComponent<Unit>());
