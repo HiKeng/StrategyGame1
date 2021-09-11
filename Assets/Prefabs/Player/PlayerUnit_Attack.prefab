@@ -54,7 +54,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.747183, y: 6.25, z: 9.007635}
+  m_Size: {x: 7.6968155, y: 5.4994955, z: 7.9259925}
   m_Center: {x: 0, y: -2, z: 0}
 --- !u!54 &1366492065817443667
 Rigidbody:
@@ -288,6 +288,9 @@ MonoBehaviour:
   _damagePerHit: 2
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
+  _attackOnUnit: {fileID: 0}
+  _delayBeforeAttacak: 0.5
+  _delayCount: 0
   _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:

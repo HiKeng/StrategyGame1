@@ -278,6 +278,8 @@ MonoBehaviour:
   _damagePerHit: 25
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
+  _attackOnUnit: {fileID: 0}
+  _delayBeforeAttack: 2
   _areaToAttack: {fileID: 7236407002883465032}
   _onStartAttack:
     m_PersistentCalls:

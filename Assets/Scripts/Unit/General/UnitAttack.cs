@@ -11,8 +11,8 @@ public class UnitAttack : MonoBehaviour
     public bool _isAttackOnCooldown = false;
     [SerializeField] public Unit _aimOnUnit;
     [SerializeField] public Unit _attackOnUnit;
-    [SerializeField] public float _delayBeforeAttack;
-    float _delayCount;
+    [SerializeField] public float _delayBeforeAttacak = 0.5f;
+    [SerializeField] float _delayCount;
 
     [Header("References")]
     [SerializeField] public UnitAreaToAttack _areaToAttack;
@@ -27,7 +27,6 @@ public class UnitAttack : MonoBehaviour
 
         if(_aimOnUnit != null)
         {
-            _checkAttackOnUnit(_aimOnUnit);
 
             if (_aimOnUnit.GetComponent<UnitHealth>()._isAlive == false)
             {
@@ -35,6 +34,7 @@ public class UnitAttack : MonoBehaviour
             }
         }
 
+        _checkAttackOnUnit(_aimOnUnit);
     }
 
     public virtual void _checkTargetToAttack()
@@ -110,22 +110,21 @@ public class UnitAttack : MonoBehaviour
     {
         if(_aimOnUnit != null)
         {
-            if(_delayBeforeAttack < _delayBeforeAttack)
+            if(_delayCount < _delayBeforeAttacak)
             {
                 _delayCount += Time.deltaTime;
             }
 
-            if (_delayCount >= _delayBeforeAttack)
+            if (_delayCount >= _delayBeforeAttacak)
             {
                 _attackOnUnit = _aimOnUnit;
             }
         }
 
-        if(_aimOnUnit == null)
+        else if(_aimOnUnit == null)
         {
             _delayCount = 0;
             _attackOnUnit = null;
         }
-
     }
 }
