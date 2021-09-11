@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class UnitDeployManager : SingletonBase<UnitDeployManager>
 {
     [SerializeField] int _unitLimitAmount = 3;
     [SerializeField] int _currentUnitAmount = 0;
+
+    [SerializeField] TextMeshProUGUI _amountLeftUI;
 
     public GameObject _UnitPrefab;
 
@@ -14,6 +17,7 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
 
     [Header("Events")]
     public UnityEvent _onStart;
+    public UnityEvent _onPrepareDeployUnit;
     public UnityEvent _onDeployUnit;
     public UnityEvent _onReachedUnitLimit;
     public UnityEvent _onEndDeployPhase;
@@ -40,6 +44,16 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     public void _IncreaseCurrentUnitAmount()
     {
         _currentUnitAmount++;
+    }
+
+    public void _OnPrepareDeployUnit()
+    {
+        _onPrepareDeployUnit.Invoke();
+    }
+
+    public void _UpdateAmountLeftUI()
+    {
+        _amountLeftUI.text = $"{_unitLimitAmount - _currentUnitAmount} Left";
     }
 
     

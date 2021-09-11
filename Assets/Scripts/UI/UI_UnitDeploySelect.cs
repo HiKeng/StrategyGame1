@@ -20,5 +20,6 @@ public class UI_UnitDeploySelect : MonoBehaviour
     {
         ClickStateManager.Instance._ChangeClickState(ClickStateManager.ClickState.PrepareToDeploy);
         UnitDeployManager.Instance._UnitPrefab = _playerUnit;
+        UnitDeployManager.Instance._onPrepareDeployUnit.Invoke();
     }    
 }
