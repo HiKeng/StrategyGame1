@@ -15,6 +15,7 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     [Header("Events")]
     public UnityEvent _onStart;
     public UnityEvent _onDeployUnit;
+    public UnityEvent _onEndDeployPhase;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
         if(Input.GetKeyDown(KeyCode.C))
         {
             _isUnitDeployPhase = false;
+            _onEndDeployPhase.Invoke();
         }
     }
 
