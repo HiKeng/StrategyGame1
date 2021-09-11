@@ -10,6 +10,9 @@ public class UnitAttack : MonoBehaviour
     [SerializeField] public float _damagePerHit = 20f;
     public bool _isAttackOnCooldown = false;
     [SerializeField] public Unit _aimOnUnit;
+    [SerializeField] public Unit _attackOnUnit;
+    [SerializeField] public float _delayBeforeAttack;
+    float _delayCount;
 
     [Header("References")]
     [SerializeField] public UnitAreaToAttack _areaToAttack;
@@ -24,11 +27,14 @@ public class UnitAttack : MonoBehaviour
 
         if(_aimOnUnit != null)
         {
+            _checkAttackOnUnit(_aimOnUnit);
+
             if (_aimOnUnit.GetComponent<UnitHealth>()._isAlive == false)
             {
                 _aimOnUnit = null;
             }
         }
+
     }
 
     public virtual void _checkTargetToAttack()
@@ -39,9 +45,9 @@ public class UnitAttack : MonoBehaviour
             Debug.LogWarning($"{this.name} added {_areaToAttack._unitWithinArea[0].name} to list.");
         }
 
-        if(_aimOnUnit != null && _aimOnUnit.GetComponent<UnitHealth>()._isAlive)
+        if(_aimOnUnit != null && _aimOnUnit.GetComponent<UnitHealth>()._isAlive && _attackOnUnit != null)
         {
-            _attackToUnit(_aimOnUnit);
+            _attackToUnit(_attackOnUnit);
         }
         else
         {
@@ -98,5 +104,28 @@ public class UnitAttack : MonoBehaviour
         _isAttackOnCooldown = true;
         yield return new WaitForSeconds(_cooldownTime);
         _isAttackOnCooldown = false;
+    }
+
+    public virtual void _checkAttackOnUnit(Unit _targetUnit)
+    {
+        if(_aimOnUnit != null)
+        {
+            if(_delayBeforeAttack < _delayBeforeAttack)
+            {
+                _delayCount += Time.deltaTime;
+            }
+
+            if (_delayCount >= _delayBeforeAttack)
+            {
+                _attackOnUnit = _aimOnUnit;
+            }
+        }
+
+        if(_aimOnUnit == null)
+        {
+            _delayCount = 0;
+            _attackOnUnit = null;
+        }
+
     }
 }
