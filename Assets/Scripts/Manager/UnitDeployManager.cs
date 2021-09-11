@@ -2,18 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitDeployManager : MonoBehaviour
+public class UnitDeployManager : SingletonBase<UnitDeployManager>
 {
     public GameObject _playerUnitPrefab;
 
-    #region Singleton
-
-    public static UnitDeployManager Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    #endregion
+    public bool _isUnitDeployPhase = true;
 }

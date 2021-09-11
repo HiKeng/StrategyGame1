@@ -18209,7 +18209,7 @@ PrefabInstance:
     - target: {fileID: 5877506422843093130, guid: 126bf5540f8ab8b48b0aee8009c32e6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126bf5540f8ab8b48b0aee8009c32e6b, type: 3}
@@ -18747,6 +18747,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner_Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163193487938216917, guid: e8619b2dbcc76fd4d9bb568c93d033d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2163193487938216919, guid: e8619b2dbcc76fd4d9bb568c93d033d3,
         type: 3}

@@ -53,15 +53,16 @@ public class Tile_UnitPlacement : Tile
     {
         if (Input.GetMouseButtonDown(0) && ClickStateManager.Instance._isClickAble)
         {
-            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle)
+            if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle
+                && UnitDeployManager.Instance._isUnitDeployPhase)
             {
                 if (!_isUnitActive)
                 {
-                    //_DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
                 }
                 else
                 {
-                    //Debug.Log("Can't place a unit");
+                    Debug.Log("Can't place a unit");
                 }
             }
 
