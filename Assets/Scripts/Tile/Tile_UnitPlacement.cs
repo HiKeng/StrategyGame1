@@ -46,6 +46,8 @@ public class Tile_UnitPlacement : Tile
         if (!_isUnitActive)
         {
             GetComponent<Tile_UnitPlacement>()._DroppingUnit(_unitPrefab);
+
+            UnitDeployManager.Instance._onDeployUnit.Invoke();
         }
     }
 
@@ -56,9 +58,9 @@ public class Tile_UnitPlacement : Tile
             if (ClickStateManager.Instance._CurrentState == ClickStateManager.ClickState.Idle
                 && UnitDeployManager.Instance._isUnitDeployPhase)
             {
-                if (!_isUnitActive)
+                if (!_isUnitActive && UnitDeployManager.Instance._IsNotExceedUnitLimitAmount())
                 {
-                    _DeployUnit(UnitDeployManager.Instance._playerUnitPrefab);
+                    _DeployUnit(UnitDeployManager.Instance._UnitPrefab);
                 }
                 else
                 {
