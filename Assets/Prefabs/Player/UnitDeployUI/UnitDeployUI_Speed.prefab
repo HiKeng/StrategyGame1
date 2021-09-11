@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3973509431508270674}
   - component: {fileID: 8692161976316188837}
   m_Layer: 0
-  m_Name: UnitDeployUI_Attack
+  m_Name: UnitDeployUI_Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a124e0ba9ff4d8e45bb290913ca96d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerUnit: {fileID: 267897411711766644, guid: dccf0da4323c8ec4f934e606c95df412,
+  _playerUnit: {fileID: 267897411711766644, guid: 45ca65f4ed977114ba1e5eff09b3001f,
     type: 3}
 --- !u!1 &2611426545039470090
 GameObject:
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.1643126, b: 0.121395506, a: 1}
+  m_Color: {r: 0.12156862, g: 0.5402048, b: 0.83137256, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -15,6 +15,7 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     [Header("Events")]
     public UnityEvent _onStart;
     public UnityEvent _onDeployUnit;
+    public UnityEvent _onReachedUnitLimit;
     public UnityEvent _onEndDeployPhase;
 
     private void Start()
