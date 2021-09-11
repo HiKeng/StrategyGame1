@@ -27,15 +27,6 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
         _onStart.Invoke();
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            _isUnitDeployPhase = false;
-            _onEndDeployPhase.Invoke();
-        }
-    }
-
     public bool _IsNotExceedUnitLimitAmount()
     {
         return _currentUnitAmount < _unitLimitAmount;
@@ -44,6 +35,8 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     public void _IncreaseCurrentUnitAmount()
     {
         _currentUnitAmount++;
+
+        if(!_IsNotExceedUnitLimitAmount()) { _onReachedUnitLimit.Invoke(); }
     }
 
     public void _OnPrepareDeployUnit()
@@ -54,6 +47,12 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     public void _UpdateAmountLeftUI()
     {
         _amountLeftUI.text = $"{_unitLimitAmount - _currentUnitAmount} Left";
+    }
+
+    public void _EndDeployPhase()
+    {
+        _isUnitDeployPhase = false;
+        _onEndDeployPhase.Invoke();
     }
 
     

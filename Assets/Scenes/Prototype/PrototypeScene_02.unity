@@ -18206,11 +18206,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnitDeploy_Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 5877506422843093130, guid: 126bf5540f8ab8b48b0aee8009c32e6b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126bf5540f8ab8b48b0aee8009c32e6b, type: 3}
 --- !u!1001 &1350941143599476309
