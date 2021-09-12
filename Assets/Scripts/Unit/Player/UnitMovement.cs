@@ -22,6 +22,8 @@ public class UnitMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (UnitDeployManager.Instance._isUnitDeployPhase) { return; }
+
         if (_isMoving)
         {
             float _step = _speed * Time.deltaTime;

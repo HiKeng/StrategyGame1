@@ -5029,8 +5029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382eec1f2749c64e972ed57b77462ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackCooldownTime: 4
-  _damagePerHit: 5
+  _attackCooldownTime: 2
+  _damagePerHit: 1
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
@@ -5087,6 +5087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198c3b864e9ca04cb47e5ac96e73fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waitBeforeStartMove: 0
   _positionToMove: []
 --- !u!95 &5328988261486629686
 Animator:

@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba3218e2c3889c4db8c7790b81e419d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitLimitAmount: 3
+  _unitLimitAmount: 4
   _amountLeftUI: {fileID: 4707782887218767806}
   _UnitPrefab: {fileID: 0}
   _isUnitDeployPhase: 1
@@ -695,6 +695,17 @@ MonoBehaviour:
       - m_Target: {fileID: 919716002698442533}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2611409157620908051}
+        m_MethodName: _UpdateAmountLeftUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

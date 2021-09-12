@@ -11,13 +11,28 @@ public class UnitMoveLoop : MonoBehaviour
         public float _waitTimeBeforeMove;
     }
 
+    [SerializeField] float _waitBeforeStartMove = 0f;
+
     [SerializeField] List<PositionToMove> _positionToMove;
+
+    bool _isStartMove = true;
 
     float _waitTimeCount;
     int _moveIndex;
 
+    private void Start()
+    {
+        if(_waitBeforeStartMove > 0)
+        {
+            _isStartMove = false;
+            StartCoroutine(_StartWaitTimeCount(_waitBeforeStartMove));
+        }
+    }
+
     void Update()
     {
+        if(!_isStartMove) { return; }
+
         _proceedLoopMove();
     }
 
@@ -51,4 +66,13 @@ public class UnitMoveLoop : MonoBehaviour
             _moveIndex++;
         }
     }
+
+    IEnumerator _StartWaitTimeCount (float WaitTime)
+    {
+        yield return new WaitForSeconds(WaitTime);
+
+        _isStartMove = true;
+    }
+
+
 }

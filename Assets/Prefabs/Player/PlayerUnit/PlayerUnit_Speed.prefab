@@ -84,7 +84,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerControllable: 1
+  _isPlacedOnStart: 0
   _isAvailableForAction: 1
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _AvailableOnTile: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465038}
   _areaVisualList: []
@@ -143,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlive: 1
-  _MaxHealth: 30
+  _MaxHealth: 20
   _CurrentHealth: 100
   _healthSlider: {fileID: 2684411363584168644}
   _onTakeDamage:
@@ -284,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldownTime: 0.2
-  _damagePerHit: 3
+  _damagePerHit: 1
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
@@ -319,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxActionValue: 100
   _startingActionValue: 40
-  _speedMultiplier: 20
+  _speedMultiplier: 10
   _isActionBarReady: 0
   _actionBarSlider: {fileID: 3183877006706528084}
   _onActionBarStartMax:

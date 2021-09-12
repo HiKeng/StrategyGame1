@@ -86,7 +86,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlayerControllable: 0
   _isPlacedOnStart: 1
-  _colliderCheckSize: {x: 0.5, y: 8, z: 0.5}
   _isAvailableForAction: 1
   m_LayerMask:
     serializedVersion: 2
@@ -160,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlive: 1
-  _MaxHealth: 200
+  _MaxHealth: 175
   _CurrentHealth: 100
   _healthSlider: {fileID: 2477036761217603945}
   _onTakeDamage:
@@ -290,8 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382eec1f2749c64e972ed57b77462ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackCooldownTime: 4
-  _damagePerHit: 25
+  _attackCooldownTime: 5
+  _damagePerHit: 20
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
@@ -348,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198c3b864e9ca04cb47e5ac96e73fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waitBeforeStartMove: 0
   _positionToMove:
   - _tilePostion: {fileID: 0}
     _waitTimeBeforeMove: 2
