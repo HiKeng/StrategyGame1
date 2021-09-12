@@ -54,8 +54,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.6968155, y: 5.4994955, z: 7.9259925}
-  m_Center: {x: 0, y: -2, z: 0}
+  m_Size: {x: 7.6968155, y: 10.379601, z: 7.9259925}
+  m_Center: {x: 0, y: -4.440052, z: 0}
 --- !u!54 &1366492065817443667
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85,7 +85,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerControllable: 0
+  _isPlacedOnStart: 1
   _isAvailableForAction: 1
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   _AvailableOnTile: {fileID: 0}
   _areaToAttack: {fileID: 7236407002883465038}
   _areaVisualList: []
@@ -95,6 +99,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1951179488626337018}
         m_MethodName: _setAreaVisualActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1951179488626337018}
+        m_MethodName: _AssignUnitOnStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

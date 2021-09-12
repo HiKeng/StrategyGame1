@@ -7,7 +7,10 @@ using UnityEngine.Events;
 public class Unit : MonoBehaviour, IGetComponentFromChilds
 {
     public bool _isPlayerControllable = true;
+    [SerializeField] bool _isPlacedOnStart = false;
+    Vector3 _colliderCheckSize = new Vector3(0.5f, 8f, 0.5f);
     [HideInInspector] public bool _isAvailableForAction;
+    public LayerMask m_LayerMask;
     public Tile _AvailableOnTile;
     
     [SerializeField] GameObject _areaToAttack;
@@ -91,6 +94,19 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
         if (_AvailableOnTile.GetComponent<Tile_UnitPlacement>()._currentActiveUnitOnTile = this)
         {
             _AvailableOnTile.GetComponent<Tile_UnitPlacement>()._ResetUnitActive();
+        }
+    }
+
+    public void _AssignUnitOnStart()
+    {
+        if(!_isPlacedOnStart) { return; }
+
+        Collider[] _hitCollider = Physics.OverlapBox(gameObject.transform.position, _colliderCheckSize, Quaternion.identity, m_LayerMask);
+
+        if(_hitCollider[0] != null)
+        {
+            _AvailableOnTile = _hitCollider[0].GetComponent<Tile>();
+            _hitCollider[0].GetComponent<Tile_UnitPlacement>()._AssignNewUnitActive(this);
         }
     }
 }

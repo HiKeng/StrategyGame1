@@ -1400,25 +1400,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1951179488626337018, guid: c30b296407eb5a84e89721fba6ffd90e,
-        type: 3}
-      propertyPath: _AvailableOnTile
-      value: 
-      objectReference: {fileID: 1729316299}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30b296407eb5a84e89721fba6ffd90e, type: 3}
---- !u!114 &148898314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1951179488626337018, guid: c30b296407eb5a84e89721fba6ffd90e,
-    type: 3}
-  m_PrefabInstance: {fileID: 148898313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cd290cb995b70419eb7a2657004ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &149629674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1174000459570279178, guid: 055227627a0abd44f8a562c9f15bc1b9,
@@ -2503,11 +2486,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1951179488626337018, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
-        type: 3}
-      propertyPath: _AvailableOnTile
-      value: 
-      objectReference: {fileID: 2141109122}
     - target: {fileID: 2445349317908958294, guid: 22b6c5fa902a1e74b9fced3e66dd3479,
         type: 3}
       propertyPath: _positionToMove.Array.size
@@ -2996,7 +2974,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _currentActiveUnitOnTile
       value: 
-      objectReference: {fileID: 470645651}
+      objectReference: {fileID: 0}
     - target: {fileID: 6722256185824723142, guid: 58c13aa7bffa1934192f7db7df2f3b71,
         type: 3}
       propertyPath: m_Text
@@ -3343,11 +3321,6 @@ PrefabInstance:
       propertyPath: _positionToMove.Array.data[3]._tilePostion
       value: 
       objectReference: {fileID: 526354251}
-    - target: {fileID: 6811012952766787481, guid: 055227627a0abd44f8a562c9f15bc1b9,
-        type: 3}
-      propertyPath: _tarvelTimePerTile
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4332,18 +4305,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 464185881}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &470645651 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1951179488626337018, guid: 185ec753a998759488321db1fbb77352,
-    type: 3}
-  m_PrefabInstance: {fileID: 2045701229}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cd290cb995b70419eb7a2657004ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &487124425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5551,11 +5512,6 @@ PrefabInstance:
       propertyPath: _positionToMove.Array.data[3]._tilePostion
       value: 
       objectReference: {fileID: 526354251}
-    - target: {fileID: 6811012952766787481, guid: 055227627a0abd44f8a562c9f15bc1b9,
-        type: 3}
-      propertyPath: _tarvelTimePerTile
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -14942,11 +14898,6 @@ PrefabInstance:
       propertyPath: _positionToMove.Array.data[3]._tilePostion
       value: 
       objectReference: {fileID: 526354251}
-    - target: {fileID: 6811012952766787481, guid: 055227627a0abd44f8a562c9f15bc1b9,
-        type: 3}
-      propertyPath: _tarvelTimePerTile
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -18725,7 +18676,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _currentActiveUnitOnTile
       value: 
-      objectReference: {fileID: 148898314}
+      objectReference: {fileID: 0}
     - target: {fileID: 6722256185824723142, guid: 58c13aa7bffa1934192f7db7df2f3b71,
         type: 3}
       propertyPath: m_Text
@@ -18969,18 +18920,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1704858023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1729316299 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698926007}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1736130391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21379,11 +21318,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -10
       objectReference: {fileID: 0}
-    - target: {fileID: 1951179488626337018, guid: 185ec753a998759488321db1fbb77352,
-        type: 3}
-      propertyPath: _AvailableOnTile
-      value: 
-      objectReference: {fileID: 1926079550}
     - target: {fileID: 2170050680707601205, guid: 185ec753a998759488321db1fbb77352,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -22621,11 +22555,6 @@ PrefabInstance:
       propertyPath: _positionToMove.Array.data[3]._tilePostion
       value: 
       objectReference: {fileID: 526354251}
-    - target: {fileID: 6811012952766787481, guid: 055227627a0abd44f8a562c9f15bc1b9,
-        type: 3}
-      propertyPath: _tarvelTimePerTile
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8441715237519238532, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -22638,18 +22567,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055227627a0abd44f8a562c9f15bc1b9, type: 3}
---- !u!114 &2141109122 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 1455167163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2143929027
 PrefabInstance:
   m_ObjectHideFlags: 0
