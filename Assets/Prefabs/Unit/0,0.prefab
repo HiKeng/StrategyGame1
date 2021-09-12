@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8682663427745978429}
   - component: {fileID: 886054325212897476}
   - component: {fileID: 8802234075915073397}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: AreaSample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 6487049945689049364}
   - component: {fileID: 6722256185824723143}
   - component: {fileID: 6722256185824723142}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 8327952732557778694}
   - component: {fileID: 1510633787176485754}
   - component: {fileID: 1948762994614499414}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,13 +382,13 @@ GameObject:
   - component: {fileID: 6722256187575497547}
   - component: {fileID: 6722256187575497546}
   - component: {fileID: 6722256187575497545}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6722256187575497544
 Transform:
   m_ObjectHideFlags: 0
