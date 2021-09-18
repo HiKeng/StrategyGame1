@@ -36,6 +36,7 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
     private void Awake()
     {
         _GetComponentFromChildrens(_areaToAttack);
+        _AssignUnitToList();
     }
 
     void Start()
@@ -119,5 +120,10 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
             _AvailableOnTile = _hitCollider[0].GetComponent<Tile>();
             _hitCollider[0].GetComponent<Tile_UnitPlacement>()._AssignNewUnitActive(this);
         }
+    }
+
+    public void _AssignUnitToList()
+    {
+        WinLoseManager.Instance._AssignUnit(this);
     }
 }
