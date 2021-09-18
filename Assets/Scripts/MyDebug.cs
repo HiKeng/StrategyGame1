@@ -26,12 +26,7 @@ public class MyDebug : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene(Application.loadedLevel);
-        }
-
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
+            SceneChangeManager.Instance._LoadCurrentScene();
         }
     }
 

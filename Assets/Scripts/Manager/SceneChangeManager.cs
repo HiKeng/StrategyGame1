@@ -13,12 +13,12 @@ public class SceneChangeManager : SingletonBase<SceneChangeManager>
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.LoadScene(_sceneList[_sceneIndex + 1]);
+            _LoadNextStage();
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            SceneManager.LoadScene(_sceneList[_sceneIndex - 1]);
+            _LoadPreviousStage();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -34,8 +34,28 @@ public class SceneChangeManager : SingletonBase<SceneChangeManager>
         }
     }
 
+    public void _LoadPreviousStage()
+    {
+        SceneManager.LoadScene(_sceneList[_sceneIndex - 1]);
+    }
+
+    public void _LoadNextStage()
+    {
+        SceneManager.LoadScene(_sceneList[_sceneIndex + 1]);
+    }
+
     public void _LoadScene(string _sceneToLoad)
     {
         SceneManager.LoadScene(_sceneToLoad);
+    }
+
+    public void _LoadCurrentScene()
+    {
+        SceneManager.LoadScene(Application.loadedLevel);
+    }
+
+    public void _LoadTitleScreen()
+    {
+        SceneManager.LoadScene("Title");
     }
 }

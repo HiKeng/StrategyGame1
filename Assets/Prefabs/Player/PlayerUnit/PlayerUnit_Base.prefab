@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerControllable: 0
+  _UnitType: 1
   _isPlacedOnStart: 1
   _isAvailableForAction: 1
   m_LayerMask:

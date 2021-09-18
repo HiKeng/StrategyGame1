@@ -7,6 +7,17 @@ using UnityEngine.Events;
 public class Unit : MonoBehaviour, IGetComponentFromChilds
 {
     public bool _isPlayerControllable = true;
+
+    [System.Serializable]
+    public enum UnitType
+    {
+        PlayerUnit,
+        PlayerBase,
+        EnemyUnit
+    }
+
+    public UnitType _UnitType;
+
     [SerializeField] bool _isPlacedOnStart = false;
     Vector3 _colliderCheckSize = new Vector3(0.5f, 8f, 0.5f);
     [HideInInspector] public bool _isAvailableForAction;
