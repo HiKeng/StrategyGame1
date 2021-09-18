@@ -36,11 +36,11 @@ public class Unit : MonoBehaviour, IGetComponentFromChilds
     private void Awake()
     {
         _GetComponentFromChildrens(_areaToAttack);
-        _AssignUnitToList();
     }
 
     void Start()
     {
+        _AssignUnitToList();
         onStart.Invoke();
     }
 
