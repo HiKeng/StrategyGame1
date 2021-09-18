@@ -68,6 +68,7 @@ public class UnitHealth : MonoBehaviour
     {
         _isAlive = false;
 
+        WinLoseManager.Instance._RemoveUnit(GetComponent<Unit>());
         _onDead.Invoke();
     }
 }

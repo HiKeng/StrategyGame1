@@ -58,15 +58,33 @@ public class WinLoseManager : SingletonBase<WinLoseManager>
         }
     }
 
+    public void _RemoveUnit(Unit _unitToAssign)
+    {
+        if (_unitToAssign._UnitType == Unit.UnitType.PlayerUnit)
+        {
+            _playerUnitList.Remove(_unitToAssign);
+        }
+
+        if (_unitToAssign._UnitType == Unit.UnitType.PlayerBase)
+        {
+            _playerBaseList.Remove(_unitToAssign);
+        }
+
+        if (_unitToAssign._UnitType == Unit.UnitType.EnemyUnit)
+        {
+            _enemyUnitList.Remove(_unitToAssign);
+        }
+    }
+
     void _checkWinLose()
     {
-        if (_enemyUnitList == null)
+        if (_enemyUnitList.Count == 0)
         {
             _StageClear();
             _isStageEnd = true;
         }
 
-        if (_playerUnitList == null || _playerBaseList == null)
+        if (_playerUnitList.Count == 0 || _playerBaseList.Count == 0)
         {
             _StageFail();
             _isStageEnd = true;
