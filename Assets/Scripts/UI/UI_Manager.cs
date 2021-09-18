@@ -6,12 +6,16 @@ using UnityEngine.UI;
 public class UI_Manager : MonoBehaviour
 {
     [HideInInspector] public List<GameObject> _uiPageList;
+    [SerializeField] GameObject _allPageUI;
 
     private void Start()
     {
         foreach(Transform child in transform.transform)
         {
-            _uiPageList.Add(child.gameObject);
+            if(child.gameObject != _allPageUI)
+            {
+                _uiPageList.Add(child.gameObject);
+            }
         }
     }
 

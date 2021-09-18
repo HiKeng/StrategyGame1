@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeManager : SingletonBase<SceneChangeManager>
 {
+    [SerializeField] bool _isTitleScreen;
     [SerializeField] int _sceneIndex;
     [SerializeField] List<string> _sceneList;
 
@@ -18,6 +19,18 @@ public class SceneChangeManager : SingletonBase<SceneChangeManager>
         if (Input.GetKeyDown(KeyCode.O))
         {
             SceneManager.LoadScene(_sceneList[_sceneIndex - 1]);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(_isTitleScreen)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                _LoadScene("Title");
+            }
         }
     }
 
