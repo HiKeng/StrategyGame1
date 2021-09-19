@@ -6,6 +6,8 @@ using TMPro;
 
 public class UnitDeployManager : SingletonBase<UnitDeployManager>
 {
+    [SerializeField] bool _isActiveOnStart = true;
+
     [SerializeField] int _unitLimitAmount = 3;
     int _currentUnitAmount = 0;
 
@@ -21,7 +23,13 @@ public class UnitDeployManager : SingletonBase<UnitDeployManager>
     public UnityEvent _onReachedUnitLimit;
     public UnityEvent _onEndDeployPhase;
 
-    private void Start()
+    public void Start()
+    {
+        if(!_isActiveOnStart) { return; }
+        _StartDeployPhase();
+    }
+
+    public void _StartDeployPhase()
     {
         _onStart.Invoke();
     }

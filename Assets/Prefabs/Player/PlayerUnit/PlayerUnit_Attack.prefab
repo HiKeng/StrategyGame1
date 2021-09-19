@@ -4824,6 +4824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerControllable: 1
+  _UnitType: 0
   _isPlacedOnStart: 0
   _isAvailableForAction: 1
   m_LayerMask:
@@ -5062,7 +5063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxActionValue: 100
-  _startingActionValue: 60
+  _startingActionValue: 100
   _speedMultiplier: 7
   _isActionBarReady: 0
   _actionBarSlider: {fileID: 3183877006706528084}
