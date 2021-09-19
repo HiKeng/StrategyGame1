@@ -5,7 +5,7 @@ using UnityEngine;
 public class TutorialManager : SingletonBase<TutorialManager>
 {
     [SerializeField] List<GameObject> _popUps;
-    int _popUpIndex = -1;
+    public int _popUpIndex = -1;
 
     void Start()
     {
