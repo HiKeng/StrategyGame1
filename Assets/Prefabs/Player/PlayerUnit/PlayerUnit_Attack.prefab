@@ -5028,8 +5028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382eec1f2749c64e972ed57b77462ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackCooldownTime: 0.1
-  _damagePerHit: 0.3
+  _attackCooldownTime: 0.2
+  _damagePerHit: 0.7
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
