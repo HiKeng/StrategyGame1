@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(UnitMovement))]
 public class UnitMoveLoop : MonoBehaviour
 {
     [System.Serializable]
@@ -11,16 +12,16 @@ public class UnitMoveLoop : MonoBehaviour
         public float _waitTimeBeforeMove;
     }
 
-    [SerializeField] float _waitBeforeStartMove = 0f;
+    [SerializeField] public float _waitBeforeStartMove = 0f;
 
-    [SerializeField] List<PositionToMove> _positionToMove;
+    [SerializeField] public List<PositionToMove> _positionToMove;
 
-    bool _isStartMove = true;
+    [HideInInspector] public bool _isStartMove = true;
 
-    float _waitTimeCount;
-    int _moveIndex;
+    [HideInInspector] public float _waitTimeCount;
+    [HideInInspector] public int _moveIndex;
 
-    private void Start()
+    public virtual void Start()
     {
         if(_waitBeforeStartMove > 0)
         {
@@ -29,14 +30,14 @@ public class UnitMoveLoop : MonoBehaviour
         }
     }
 
-    void Update()
+    public virtual void Update()
     {
         if(!_isStartMove) { return; }
 
         _proceedLoopMove();
     }
 
-    void _proceedLoopMove()
+    public virtual void _proceedLoopMove()
     {
         if(!GetComponent<UnitHealth>()._isAlive) { return; }
         if(GetComponent<UnitMovement>()._isMoving) { return; }
@@ -55,7 +56,7 @@ public class UnitMoveLoop : MonoBehaviour
         }
     }
 
-    void _modifyMoveIndex()
+    public virtual void _modifyMoveIndex()
     {
         if (_moveIndex == _positionToMove.Count - 1)
         {
@@ -67,7 +68,7 @@ public class UnitMoveLoop : MonoBehaviour
         }
     }
 
-    IEnumerator _StartWaitTimeCount (float WaitTime)
+    public virtual IEnumerator _StartWaitTimeCount (float WaitTime)
     {
         yield return new WaitForSeconds(WaitTime);
 

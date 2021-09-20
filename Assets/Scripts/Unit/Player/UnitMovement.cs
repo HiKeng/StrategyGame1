@@ -7,6 +7,7 @@ public class UnitMovement : MonoBehaviour
 {
     [Header("Properties")]
     [SerializeField] float _tarvelTimePerTile = 1f;
+    [SerializeField] bool _moveOnStart = false;
 
     public bool _isMoving;
     float _distancePerTile = 10f;
@@ -22,7 +23,10 @@ public class UnitMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (UnitDeployManager.Instance._isUnitDeployPhase) { return; }
+        if (UnitDeployManager.Instance._isUnitDeployPhase) 
+        { 
+            if(!_moveOnStart) { return; }
+        }
 
         if (_isMoving)
         {
