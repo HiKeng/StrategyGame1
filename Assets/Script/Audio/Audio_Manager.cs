@@ -19,7 +19,7 @@ public class Audio_Manager : SingletonBase<Audio_Manager>
 
     private void Start()
     {
-        _loadAudioSavedSetting();
+        //_loadAudioSavedSetting();
 
     }
 

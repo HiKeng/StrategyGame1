@@ -26012,6 +26012,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio_Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7577285620325126757, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: SFXsounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577285620325126757, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: SFXsounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d466667ad41f4514cbcadd48c605950e, type: 3}
+    - target: {fileID: 7577285620325126757, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: hitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7a210df23bd255428bdf4def67109f2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6159aa1b51296ac4fb84bae995a8f43f, type: 3}
 --- !u!1 &1770574614

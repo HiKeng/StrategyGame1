@@ -4757,6 +4757,7 @@ GameObject:
   - component: {fileID: 9187441869911727639}
   - component: {fileID: 8991814157517788082}
   - component: {fileID: 9191026124217020671}
+  - component: {fileID: 3524497331256889728}
   m_Layer: 0
   m_Name: PlayerUnit_Attack
   m_TagString: Untagged
@@ -5051,6 +5052,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3524497331256889728}
+        m_MethodName: _playSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d466667ad41f4514cbcadd48c605950e,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8991814157517788082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5084,6 +5097,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad3c853c6d117634cac04e867bbbec2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3524497331256889728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267897411711766644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff941b6f782f2740a91b64ae2afe1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &995703782419238211
