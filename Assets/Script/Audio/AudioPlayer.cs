@@ -1,24 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Audio;
-using System;
 
-public class Audio_Manager : MonoBehaviour
+public class AudioPlayer : MonoBehaviour
 {
     [SerializeField] AudioMixer audioMixer;
 
     public Sound[] SFXsounds;
 
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
-    [HideInInspector] public AudioClip hitClip;
+    public AudioClip hitClip;
 
-    public static Audio_Manager Instance;
-
+    public static AudioPlayer Instance;
 
     void Awake()
     {
         Instance = this;
-        audioSource = gameObject.GetComponent<AudioSource>();
+        //audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -40,7 +40,7 @@ public class Audio_Manager : MonoBehaviour
 
     public void PlaySampleSFX(AudioClip _SampleSFX, bool _isPlayed)
     {
-        if(_isPlayed)
+        if (_isPlayed)
         {
             audioSource.Play(0);
         }
@@ -56,4 +56,10 @@ public class Audio_Manager : MonoBehaviour
         audioMixer.SetFloat("SFX_Volume", Mathf.Log10(PlayerPrefs.GetFloat("SFX_Volume")) * 20);
         audioMixer.SetFloat("BGM_Volume", Mathf.Log10(PlayerPrefs.GetFloat("BGM_Volume")) * 20);
     }
+
+    public void _testFunction()
+    {
+        Debug.Log("Hello");
+    }
+
 }

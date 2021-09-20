@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlaySFX : MonoBehaviour
 {
-    public void _playSFX(AudioClip _sfx)
+    public void _playSFX(AudioClip _sfxToPlay)
     {
-        Audio_Manager.Instance.playSFX(0);
+        Audio_Manager.Instance._playThisSFX(_sfxToPlay);
     }
 }

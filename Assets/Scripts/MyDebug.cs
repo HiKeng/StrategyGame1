@@ -28,6 +28,11 @@ public class MyDebug : MonoBehaviour
         {
             SceneChangeManager.Instance._LoadCurrentScene();
         }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            //Audio_Manager.Instance.playSFX(0);
+        }
     }
 
     public void _ChangeMoveCountValue(int _amount)

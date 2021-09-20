@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1116655319227234326}
   - component: {fileID: 6608549488155817013}
   - component: {fileID: 5277256758703860165}
-  - component: {fileID: 7577285620325126757}
+  - component: {fileID: 6735043462584172532}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: Audio_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7577285620325126757
+--- !u!114 &6735043462584172532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,23 +240,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 9968afb3dfec5c949a91b4499db5f8cc, type: 2}
-  SFXsounds:
-  - clip: {fileID: 8300000, guid: d787dfaa3941cf34dbf777908b6746a0, type: 3}
-  - clip: {fileID: 8300000, guid: e096288f03e1de146879d25b0f35aa6e, type: 3}
-  - clip: {fileID: 8300000, guid: 4ea8c09956f27a044b14f52196e7f177, type: 3}
-  - clip: {fileID: 8300000, guid: daa6b8c033b0a5c49818c511986cc2eb, type: 3}
-  - clip: {fileID: 8300000, guid: 9f67c39a8cc1cfe499c535a03afc8462, type: 3}
-  - clip: {fileID: 8300000, guid: e8f8305c3933b4542a3d62e5a207138d, type: 3}
-  - clip: {fileID: 8300000, guid: 926900765d415f44d98350f2a325402a, type: 3}
-  - clip: {fileID: 8300000, guid: 0b20561a15a1388449e2a1793e7b3f73, type: 3}
-  - clip: {fileID: 8300000, guid: 92ba3bcbb00617c4d99df4873f576b32, type: 3}
-  - clip: {fileID: 8300000, guid: 4e646d63eaeaf2a4c87829ee28a4040d, type: 3}
-  - clip: {fileID: 8300000, guid: e7b25e20ee3a1654cb5ae51a4843a54e, type: 3}
-  - clip: {fileID: 8300000, guid: 9f67c39a8cc1cfe499c535a03afc8462, type: 3}
-  - clip: {fileID: 8300000, guid: 0a3a696d8e142a448b60ef137c3553cd, type: 3}
-  - clip: {fileID: 8300000, guid: aeab8172f37705043890698e2926a41b, type: 3}
-  - clip: {fileID: 8300000, guid: ef11ba06d5e623d4781d7b6c7127b43c, type: 3}
-  - clip: {fileID: 8300000, guid: fddbfd3f68aaea04a948468e2b6f99a0, type: 3}
-  - clip: {fileID: 8300000, guid: bbdd22f08a8684b499c4fce77ee1d3ff, type: 3}
-  - clip: {fileID: 8300000, guid: bbdd22f08a8684b499c4fce77ee1d3ff, type: 3}
+  SFXsounds: []
   hitClip: {fileID: 0}
