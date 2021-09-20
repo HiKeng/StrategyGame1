@@ -2721,18 +2721,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 253608434}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &260509862 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5825559628000449579, guid: 58c13aa7bffa1934192f7db7df2f3b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 507966507}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a77f739dff5ce44e93fa43d5046f492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &261935371
 GameObject:
   m_ObjectHideFlags: 0
@@ -16835,12 +16823,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _positionToMove.Array.data[1]._tilePostion
       value: 
-      objectReference: {fileID: 856778230}
+      objectReference: {fileID: 381351965}
     - target: {fileID: 2445349317908958294, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: _positionToMove.Array.data[2]._tilePostion
       value: 
-      objectReference: {fileID: 260509862}
+      objectReference: {fileID: 1804031995}
     - target: {fileID: 2445349317908958294, guid: 055227627a0abd44f8a562c9f15bc1b9,
         type: 3}
       propertyPath: _positionToMove.Array.data[3]._tilePostion

@@ -4888,7 +4888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlive: 1
-  _MaxHealth: 30
+  _MaxHealth: 45
   _CurrentHealth: 100
   _healthSlider: {fileID: 2684411363584168644}
   _onTakeDamage:
@@ -4970,6 +4970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tarvelTimePerTile: 0.6
+  _moveOnStart: 0
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
