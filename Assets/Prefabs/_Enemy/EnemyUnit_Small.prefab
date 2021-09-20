@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlive: 1
-  _MaxHealth: 40
+  _MaxHealth: 30
   _CurrentHealth: 100
   _healthSlider: {fileID: 2477036761217603945}
   _onTakeDamage:
@@ -4983,6 +4983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tarvelTimePerTile: 1.5
+  _moveOnStart: 0
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
@@ -5031,7 +5032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldownTime: 2
-  _damagePerHit: 1
+  _damagePerHit: 3
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
@@ -5090,6 +5091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waitBeforeStartMove: 0
   _positionToMove: []
+  _isStartMove: 1
+  _waitTimeCount: 0
+  _moveIndex: 0
 --- !u!95 &5328988261486629686
 Animator:
   serializedVersion: 3

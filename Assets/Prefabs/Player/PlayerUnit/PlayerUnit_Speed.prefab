@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tarvelTimePerTile: 0.35
+  _moveOnStart: 0
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
@@ -289,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldownTime: 0.2
-  _damagePerHit: 1
+  _damagePerHit: 0.7
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}

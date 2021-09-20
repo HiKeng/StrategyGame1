@@ -90,4 +90,12 @@ public class WinLoseManager : SingletonBase<WinLoseManager>
             _isStageEnd = true;
         }
     }
+
+    public void _DestoryAllPlayerUnit()
+    {
+        foreach(Unit _playerUnit in _playerUnitList)
+        {
+            _playerUnit.gameObject.SetActive(false);
+        }
+    }
 }
