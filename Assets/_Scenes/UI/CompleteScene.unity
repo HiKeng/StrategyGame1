@@ -256,6 +256,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118747159}
   m_CullTransparentMesh: 0
+--- !u!1001 &217172213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8849525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46.084972
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -74.57955
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116655319227234326, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261142871595489935, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio_Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277256758703860165, guid: 6159aa1b51296ac4fb84bae995a8f43f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ec8842d48dbd5674785d5aee0a7756fa, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6159aa1b51296ac4fb84bae995a8f43f, type: 3}
 --- !u!1001 &229839251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5826,7 +5900,7 @@ RectTransform:
   - {fileID: 118747160}
   - {fileID: 1389807829}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6180,7 +6254,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 334.31592, y: 62.684235}
+  m_SizeDelta: {x: 370.63208, y: 94.36211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389807830
 MonoBehaviour:
@@ -6255,8 +6329,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 67b45a736c9facb449314f8a6d2ac05b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6338,8 +6412,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -43,9 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc65d3682376e9d4b9db158b7f57df7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isTitleScreen: 0
   _sceneIndex: 0
   _sceneList:
-  - Level 1
-  - Level 2
-  - Level 3
-  - Level 4
+  - TutorialLevel
+  - Level 6

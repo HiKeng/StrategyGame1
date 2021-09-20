@@ -41,7 +41,15 @@ public class SceneChangeManager : SingletonBase<SceneChangeManager>
 
     public void _LoadNextStage()
     {
-        SceneManager.LoadScene(_sceneList[_sceneIndex + 1]);
+        if (_sceneIndex < _sceneList.Count - 1)
+        {
+            SceneManager.LoadScene(_sceneList[_sceneIndex + 1]);
+        }
+        else
+        {
+            SceneManager.LoadScene("CompleteScene");
+        }
+
     }
 
     public void _LoadScene(string _sceneToLoad)

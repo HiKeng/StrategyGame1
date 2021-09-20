@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -687, y: -174}
-  m_SizeDelta: {x: 190, y: 63.673462}
+  m_AnchoredPosition: {x: -665, y: -174}
+  m_SizeDelta: {x: 244.47998, y: 70.08569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6720195082281798981
 CanvasRenderer:
@@ -125,6 +125,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4313298375815372323}
+        m_MethodName: _playSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ab7d4e29bb27a1145adc92ce1c14557b,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -227,7 +239,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -291,7 +303,7 @@ RectTransform:
   m_GameObject: {fileID: 5002830434553158643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2241, y: 1.2241, z: 1.2241}
+  m_LocalScale: {x: 1.6340511, y: 1.6340511, z: 1.6340511}
   m_Children:
   - {fileID: 5002830435760949084}
   m_Father: {fileID: 5002830435222660452}
@@ -299,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -668, y: -57}
+  m_AnchoredPosition: {x: -636, y: -57}
   m_SizeDelta: {x: 190, y: 63.673462}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5002830434553158639
@@ -393,6 +405,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4313298375815372323}
+        m_MethodName: _playSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ab7d4e29bb27a1145adc92ce1c14557b,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5002830435222660456
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +430,7 @@ GameObject:
   - component: {fileID: 5002830435222660458}
   - component: {fileID: 5002830435222660457}
   - component: {fileID: 5002830435222660453}
+  - component: {fileID: 4313298375815372323}
   m_Layer: 5
   m_Name: StageFail_UI
   m_TagString: Untagged
@@ -510,6 +535,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiPageList: []
   _allPageUI: {fileID: 0}
+--- !u!114 &4313298375815372323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002830435222660456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff941b6f782f2740a91b64ae2afe1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4313298375815372323}
+        m_MethodName: _playSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d62db0d0598206d4aa8afa312a5b2382,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5002830435342247842
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,13 +860,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 26.57
+  m_fontSizeBase: 26.57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
