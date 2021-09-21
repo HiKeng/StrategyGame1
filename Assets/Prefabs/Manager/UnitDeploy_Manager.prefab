@@ -117,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7263231287314884434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3187589517597186208}
+  - {fileID: 700921190625690356}
   - {fileID: 6165282864389229099}
   - {fileID: 4355308315208701928}
   m_Father: {fileID: 3018134118674235314}
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.34117648}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.34117648}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1208,9 +1208,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9bcd27d496eb4f47b6aa4d4020556f0, type: 3}
---- !u!4 &3187589517597186208 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2611426544045638154, guid: f9bcd27d496eb4f47b6aa4d4020556f0,
+--- !u!224 &700921190625690356 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 124725609660651614, guid: f9bcd27d496eb4f47b6aa4d4020556f0,
     type: 3}
   m_PrefabInstance: {fileID: 576796498704882346}
   m_PrefabAsset: {fileID: 0}
