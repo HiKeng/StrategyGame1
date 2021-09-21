@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tarvelTimePerTile: 1
+  _moveOnStart: 0
   _isMoving: 0
   _onPrepareMoving:
     m_PersistentCalls:
@@ -291,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldownTime: 5
-  _damagePerHit: 20
+  _damagePerHit: 15
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}
@@ -354,6 +355,9 @@ MonoBehaviour:
     _waitTimeBeforeMove: 2
   - _tilePostion: {fileID: 0}
     _waitTimeBeforeMove: 3
+  _isStartMove: 1
+  _waitTimeCount: 0
+  _moveIndex: 0
 --- !u!95 &5328988261486629686
 Animator:
   serializedVersion: 3
