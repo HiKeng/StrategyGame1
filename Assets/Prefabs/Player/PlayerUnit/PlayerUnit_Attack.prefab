@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldownTime: 0.2
-  _damagePerHit: 0.5
+  _damagePerHit: 0.65
   _isAttackOnCooldown: 0
   _aimOnUnit: {fileID: 0}
   _attackOnUnit: {fileID: 0}

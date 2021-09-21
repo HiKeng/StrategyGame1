@@ -66,6 +66,7 @@ public class UI_ShowUnitStat : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("Hello");
         _unitStat.SetActive(true);
     }
 
