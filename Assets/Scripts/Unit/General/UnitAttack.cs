@@ -43,7 +43,7 @@ public class UnitAttack : MonoBehaviour
     {
         if(_areaToAttack._unitWithinArea.Count > 0 && _aimOnUnit == null)
         {
-            _aimOnUnit = _areaToAttack._unitWithinArea[0];
+            _aimOnUnit = _areaToAttack._UnitToAttackNext();
             Debug.LogWarning($"{this.name} added {_areaToAttack._unitWithinArea[0].name} to list.");
         }
 
@@ -53,7 +53,7 @@ public class UnitAttack : MonoBehaviour
         }
         else
         {
-            //_aimOnUnit = null;
+
         }
     }
 

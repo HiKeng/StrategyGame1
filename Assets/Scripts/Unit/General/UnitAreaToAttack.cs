@@ -92,4 +92,21 @@ public class UnitAreaToAttack : MonoBehaviour, IGetComponentFromChilds
             }
         }
     }
+
+    public Unit _UnitToAttackNext()
+    {
+        Unit _unitToAttack = null;
+
+        if (_unitWithinArea[0].GetComponent<PlayerBase>() != null && _unitWithinArea.Count > 1)
+        {
+            _unitToAttack = _unitWithinArea[1];
+        }
+
+        else
+        {
+            _unitToAttack = _unitWithinArea[0];
+        }
+
+        return _unitToAttack;
+    }
 }
